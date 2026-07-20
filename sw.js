@@ -3,7 +3,7 @@
    Version bump karne se sabhi users ko naya site milta hai.
    Purana single-page cache clear ho jaayega.
    ============================================================ */
-const CACHE = "sahidoctor-v2-2026-07-20";   // <-- naye deploy pe ye version badlein
+const CACHE = "sahidoctor-v3-2026-07-20";   // <-- naye deploy pe ye version badlein
 
 /* Har page + app shell precache (offline ke liye). Sirf wahi files
    jinke hone ka yaqeen hai — warna install fail ho sakta hai. */
@@ -19,7 +19,12 @@ const CORE = [
   "/dawa-dukan.html",
   "/juden.html",
   "/jankari.html",
+  "/about.html",
+  "/disclaimer.html",
+  "/privacy.html",
+  "/contact.html",
   "/sd-app.js",
+  "/tailwind.css",
   "/manifest.json"
 ];
 
