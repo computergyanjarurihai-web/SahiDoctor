@@ -8,10 +8,10 @@
 (function () {
   try {
     var MAP = {
-      checker: "lakshan-janch.html", diseases: "bimari-guide.html",
-      doctors: "doctor-khojen.html", labs: "lab-janch.html",
-      govt: "sarkari-aspatal.html", ambulance: "ambulance.html",
-      pharmacy: "dawa-dukan.html", join: "juden.html", about: "jankari.html"
+      checker: "lakshan-janch", diseases: "bimari-guide",
+      doctors: "doctor-khojen", labs: "lab-janch",
+      govt: "sarkari-aspatal", ambulance: "ambulance",
+      pharmacy: "dawa-dukan", join: "juden", about: "jankari"
     };
     var t = (new URLSearchParams(location.search).get("tab") ||
              location.hash.replace("#", "") || "").toLowerCase();
@@ -101,21 +101,21 @@
 <header style="background:#1D3557" class="px-4 py-4">
   <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-2">
     <div>
-      <a href="index.html" style="font-family:'Tiro Devanagari Hindi',serif;color:#fff;text-decoration:none" class="text-2xl font-extrabold leading-tight block">
+      <a href="/" style="font-family:'Tiro Devanagari Hindi',serif;color:#fff;text-decoration:none" class="text-2xl font-extrabold leading-tight block">
         सही<span style="color:#E8930C">Doctor</span>
       </a>
       <div style="font-family:'Mukta',sans-serif;color:#B9C7D6" class="text-xs">लक्षण पहचानें · सही डॉक्टर चुनें · फ़ीस तुलना करें</div>
     </div>
     <nav class="flex gap-1 flex-wrap">
-            <a href="lakshan-janch.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">लक्षण जाँच</a>
-            <a href="bimari-guide.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">बीमारी गाइड</a>
-            <a href="doctor-khojen.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">डॉक्टर खोजें</a>
-            <a href="lab-janch.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जाँच-लैब</a>
-            <a href="sarkari-aspatal.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">सरकारी अस्पताल</a>
-            <a href="ambulance.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">🚑 एम्बुलेंस</a>
-            <a href="dawa-dukan.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">💊 दवा दुकान</a>
-            <a href="juden.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">➕ जुड़ें</a>
-            <a href="jankari.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जानकारी</a>
+            <a href="lakshan-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">लक्षण जाँच</a>
+            <a href="bimari-guide" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">बीमारी गाइड</a>
+            <a href="doctor-khojen" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">डॉक्टर खोजें</a>
+            <a href="lab-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जाँच-लैब</a>
+            <a href="sarkari-aspatal" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">सरकारी अस्पताल</a>
+            <a href="ambulance" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">🚑 एम्बुलेंस</a>
+            <a href="dawa-dukan" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">💊 दवा दुकान</a>
+            <a href="juden" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">➕ जुड़ें</a>
+            <a href="jankari" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जानकारी</a>
     </nav>
   </div>
 </header>
@@ -133,8 +133,8 @@
           लक्षण देखकर सही विशेषज्ञ चुनें, अपने शहर में कम फ़ीस वाले नज़दीकी डॉक्टर खोजें और फ़ीस की तुलना करें — सब हिंदी में, एक ही जगह।
         </p>
         <div class="flex flex-wrap gap-3 mb-4">
-          <a href="lakshan-janch.html" class="sd-btn" style="font-family:'Tiro Devanagari Hindi',serif;background:#E8930C;color:#fff;text-decoration:none;box-shadow:0 4px 14px rgba(232,147,12,.35)"><span class="inline-block px-6 py-3 rounded-xl font-bold text-base">🩺 लक्षण जांच शुरू करें →</span></a>
-          <a href="doctor-khojen.html" class="sd-btn" style="font-family:'Tiro Devanagari Hindi',serif;background:#fff;color:#0F766E;border:2px solid #0F766E;text-decoration:none"><span class="inline-block px-6 py-2.5 rounded-xl font-bold text-base">🔍 डॉक्टर खोजें</span></a>
+          <a href="lakshan-janch" class="sd-btn" style="font-family:'Tiro Devanagari Hindi',serif;background:#E8930C;color:#fff;text-decoration:none;box-shadow:0 4px 14px rgba(232,147,12,.35)"><span class="inline-block px-6 py-3 rounded-xl font-bold text-base">🩺 लक्षण जांच शुरू करें →</span></a>
+          <a href="doctor-khojen" class="sd-btn" style="font-family:'Tiro Devanagari Hindi',serif;background:#fff;color:#0F766E;border:2px solid #0F766E;text-decoration:none"><span class="inline-block px-6 py-2.5 rounded-xl font-bold text-base">🔍 डॉक्टर खोजें</span></a>
         </div>
         <div style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm flex flex-wrap gap-x-4 gap-y-1">
           <span>✓ बिल्कुल मुफ़्त</span><span>✓ रजिस्ट्रेशन ज़रूरी नहीं</span><span>✓ पूरे भारत में</span>
@@ -160,7 +160,7 @@
       <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-base">स्वास्थ्य से जुड़ी हर ज़रूरी जानकारी — 9 सेवाएं, एक जगह।</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <a href="lakshan-janch.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="lakshan-janch" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">🩺</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">लक्षण जांच</span>
@@ -168,7 +168,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">अपने लक्षण चुनें और जानें कौन-सा विशेषज्ञ डॉक्टर आपको देखे।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="bimari-guide.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="bimari-guide" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">📖</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">बीमारी गाइड</span>
@@ -176,7 +176,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">डेंगू, टाइफाइड, शुगर, बी.पी. — लक्षण और खतरे के निशान सरल भाषा में।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="doctor-khojen.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="doctor-khojen" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">🔍</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">डॉक्टर खोजें</span>
@@ -184,7 +184,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">राज्य, ज़िला, तहसील या PIN कोड से नज़दीकी डॉक्टर और फ़ीस तुलना।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="lab-janch.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="lab-janch" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">🔬</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">जांच व लैब</span>
@@ -192,7 +192,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">कौन-सी जांच कहाँ कराएँ — पैथोलॉजी व डायग्नोस्टिक लैब गाइड।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="sarkari-aspatal.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="sarkari-aspatal" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">🏥</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">सरकारी अस्पताल</span>
@@ -200,7 +200,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">अपने ज़िले के नज़दीकी सरकारी अस्पताल की सूची और जानकारी।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="ambulance.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #C0392B;text-decoration:none">
+      <a href="ambulance" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #C0392B;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#FBEAE7;font-size:22px">🚑</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">एम्बुलेंस (108)</span>
@@ -208,7 +208,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">आपातकाल में तुरंत मदद — एम्बुलेंस नंबर और ज़रूरी संपर्क।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="dawa-dukan.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="dawa-dukan" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">💊</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">दवा दुकान</span>
@@ -216,7 +216,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">नज़दीकी दवा दुकान और सस्ती दवा के लिए जन औषधि केंद्र।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="juden.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="juden" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">➕</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">जुड़ें</span>
@@ -224,7 +224,7 @@
         <p style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-2">अपना क्लिनिक/जानकारी जोड़ें, सुधार सुझाएँ या हमसे संपर्क करें।</p>
         <span style="font-family:'Mukta',sans-serif;color:#0F766E" class="text-sm font-bold sd-go">खोलें →</span>
       </a>
-      <a href="jankari.html" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
+      <a href="jankari" class="sd-card block rounded-xl p-5" style="background:#FBF8F1;border:1px solid #E5DFD2;border-left:5px solid #0F766E;text-decoration:none">
         <div class="flex items-center gap-3 mb-2">
           <span class="grid place-items-center rounded-lg" style="width:44px;height:44px;background:#E0F0EE;font-size:22px">ℹ️</span>
           <span style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557" class="text-lg font-bold">जानकारी</span>
@@ -281,29 +281,29 @@
       <div style="font-family:'Mukta',sans-serif" class="text-sm">
         <div style="color:#fff" class="font-bold mb-2">सेवाएं</div>
         <div class="grid gap-1">
-          <a href="lakshan-janch.html" style="color:#B9C7D6;text-decoration:none">लक्षण जांच</a>
-          <a href="bimari-guide.html" style="color:#B9C7D6;text-decoration:none">बीमारी गाइड</a>
-          <a href="doctor-khojen.html" style="color:#B9C7D6;text-decoration:none">डॉक्टर खोजें</a>
-          <a href="lab-janch.html" style="color:#B9C7D6;text-decoration:none">जांच व लैब</a>
-          <a href="sarkari-aspatal.html" style="color:#B9C7D6;text-decoration:none">सरकारी अस्पताल</a>
+          <a href="lakshan-janch" style="color:#B9C7D6;text-decoration:none">लक्षण जांच</a>
+          <a href="bimari-guide" style="color:#B9C7D6;text-decoration:none">बीमारी गाइड</a>
+          <a href="doctor-khojen" style="color:#B9C7D6;text-decoration:none">डॉक्टर खोजें</a>
+          <a href="lab-janch" style="color:#B9C7D6;text-decoration:none">जांच व लैब</a>
+          <a href="sarkari-aspatal" style="color:#B9C7D6;text-decoration:none">सरकारी अस्पताल</a>
         </div>
       </div>
       <div style="font-family:'Mukta',sans-serif" class="text-sm">
         <div style="color:#fff" class="font-bold mb-2">और जानकारी</div>
         <div class="grid gap-1">
-          <a href="ambulance.html" style="color:#B9C7D6;text-decoration:none">एम्बुलेंस (108)</a>
-          <a href="dawa-dukan.html" style="color:#B9C7D6;text-decoration:none">दवा दुकान</a>
-          <a href="juden.html" style="color:#B9C7D6;text-decoration:none">जुड़ें</a>
-          <a href="jankari.html" style="color:#B9C7D6;text-decoration:none">जानकारी</a>
+          <a href="ambulance" style="color:#B9C7D6;text-decoration:none">एम्बुलेंस (108)</a>
+          <a href="dawa-dukan" style="color:#B9C7D6;text-decoration:none">दवा दुकान</a>
+          <a href="juden" style="color:#B9C7D6;text-decoration:none">जुड़ें</a>
+          <a href="jankari" style="color:#B9C7D6;text-decoration:none">जानकारी</a>
         </div>
       </div>
       <div style="font-family:'Mukta',sans-serif" class="text-sm">
         <div style="color:#fff" class="font-bold mb-2">संस्था व नीति</div>
         <div class="grid gap-1">
-          <a href="about.html" style="color:#B9C7D6;text-decoration:none">हमारे बारे में</a>
-          <a href="disclaimer.html" style="color:#B9C7D6;text-decoration:none">चिकित्सा अस्वीकरण</a>
-          <a href="privacy.html" style="color:#B9C7D6;text-decoration:none">गोपनीयता नीति</a>
-          <a href="contact.html" style="color:#B9C7D6;text-decoration:none">संपर्क करें</a>
+          <a href="about" style="color:#B9C7D6;text-decoration:none">हमारे बारे में</a>
+          <a href="disclaimer" style="color:#B9C7D6;text-decoration:none">चिकित्सा अस्वीकरण</a>
+          <a href="privacy" style="color:#B9C7D6;text-decoration:none">गोपनीयता नीति</a>
+          <a href="contact" style="color:#B9C7D6;text-decoration:none">संपर्क करें</a>
         </div>
       </div>
     </div>

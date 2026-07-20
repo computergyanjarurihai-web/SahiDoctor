@@ -2251,7 +2251,7 @@ function SahiDoctor() {
   };
   const goToDoctors = specialty => {
     const s = SPECIALTIES.some(x => x.v === specialty) ? specialty : "All";
-    window.location.href = "doctor-khojen.html?spec=" + encodeURIComponent(s);
+    window.location.href = "doctor-khojen?spec=" + encodeURIComponent(s);
   };
   return React.createElement("div", {
     style: {
@@ -2266,7 +2266,7 @@ function SahiDoctor() {
   }, React.createElement("div", {
     className: "max-w-3xl mx-auto flex items-center justify-between flex-wrap gap-2"
   }, React.createElement("div", null, React.createElement("a", {
-    href: "index.html",
+    href: "index",
     style: {
       ...display,
       color: "#fff",
@@ -2285,7 +2285,7 @@ function SahiDoctor() {
     className: "text-xs"
   }, "लक्षण पहचानें · सही डॉक्टर चुनें · फ़ीस तुलना करें")), React.createElement("nav", {
     className: "flex gap-1 flex-wrap"
-  }, [["checker", "लक्षण जाँच", "lakshan-janch.html"], ["diseases", "बीमारी गाइड", "bimari-guide.html"], ["doctors", "डॉक्टर खोजें", "doctor-khojen.html"], ["labs", "जाँच-लैब", "lab-janch.html"], ["govt", "सरकारी अस्पताल", "sarkari-aspatal.html"], ["ambulance", "🚑 एम्बुलेंस", "ambulance.html"], ["pharmacy", "💊 दवा दुकान", "dawa-dukan.html"], ["join", "➕ जुड़ें", "juden.html"], ["about", "जानकारी", "jankari.html"]].map(([k, l, href]) => React.createElement("a", {
+  }, [["checker", "लक्षण जाँच", "lakshan-janch"], ["diseases", "बीमारी गाइड", "bimari-guide"], ["doctors", "डॉक्टर खोजें", "doctor-khojen"], ["labs", "जाँच-लैब", "lab-janch"], ["govt", "सरकारी अस्पताल", "sarkari-aspatal"], ["ambulance", "🚑 एम्बुलेंस", "ambulance"], ["pharmacy", "💊 दवा दुकान", "dawa-dukan"], ["join", "➕ जुड़ें", "juden"], ["about", "जानकारी", "jankari"]].map(([k, l, href]) => React.createElement("a", {
     key: k,
     href: href,
     style: {
@@ -2566,7 +2566,7 @@ function SahiDoctor() {
     },
     className: "text-sm rounded-xl p-4"
   }, "✓ ", React.createElement("b", null, "SahiDoctor की verified डॉक्टर सूची जल्द आ रही है।"), " ", "डॉक्टर हैं?", " ", React.createElement("a", {
-    href: "juden.html",
+    href: "juden",
     style: {
       color: T.teal,
       fontWeight: 700,

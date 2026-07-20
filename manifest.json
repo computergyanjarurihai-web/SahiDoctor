@@ -20,28 +20,28 @@
       "name": "लक्षण जांच",
       "short_name": "लक्षण जांच",
       "description": "लक्षण चुनें और जानें कौन-सा डॉक्टर देखे",
-      "url": "/lakshan-janch.html",
+      "url": "/lakshan-janch",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "डॉक्टर खोजें",
       "short_name": "डॉक्टर खोजें",
       "description": "नज़दीकी डॉक्टर और फ़ीस तुलना",
-      "url": "/doctor-khojen.html",
+      "url": "/doctor-khojen",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "एम्बुलेंस 108",
       "short_name": "एम्बुलेंस",
       "description": "आपातकाल में तुरंत एम्बुलेंस",
-      "url": "/ambulance.html",
+      "url": "/ambulance",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
     },
     {
       "name": "बीमारी गाइड",
       "short_name": "बीमारी गाइड",
       "description": "आम बीमारियों के लक्षण और खतरे के निशान",
-      "url": "/bimari-guide.html",
+      "url": "/bimari-guide",
       "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
