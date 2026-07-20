@@ -3,6 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <script>
+/* Purane ?tab= / #hash links ko naye independent page pe redirect karo
+   (shared/indexed links + PWA shortcuts na tooten). Sabse pehle chale. */
+(function () {
+  try {
+    var MAP = {
+      checker: "lakshan-janch.html", diseases: "bimari-guide.html",
+      doctors: "doctor-khojen.html", labs: "lab-janch.html",
+      govt: "sarkari-aspatal.html", ambulance: "ambulance.html",
+      pharmacy: "dawa-dukan.html", join: "juden.html", about: "jankari.html"
+    };
+    var t = (new URLSearchParams(location.search).get("tab") ||
+             location.hash.replace("#", "") || "").toLowerCase();
+    if (MAP[t]) location.replace(MAP[t]);
+  } catch (e) {}
+})();
+</script>
+<script>
 /* Make React tolerant of Google Translate's DOM changes (prevents crashes) */
 (function () {
   if (typeof Node === "function" && Node.prototype) {
@@ -256,7 +273,7 @@
 <!-- ===== FOOTER ===== -->
 <footer style="background:#16283F;color:#B9C7D6" class="py-8">
   <div class="max-w-5xl mx-auto px-4">
-    <div class="grid md:grid-cols-3 gap-6 mb-6">
+    <div class="grid md:grid-cols-4 gap-6 mb-6">
       <div>
         <div style="font-family:'Tiro Devanagari Hindi',serif;color:#fff" class="text-lg font-bold mb-2">सहीDoctor</div>
         <p style="font-family:'Mukta',sans-serif;color:#8FA3B5" class="text-sm">हिंदी-प्रथम, मुफ़्त स्वास्थ्य नेविगेशन। लक्षण से सही डॉक्टर तक — पूरे भारत में, आसान भाषा में।</p>
@@ -278,6 +295,15 @@
           <a href="dawa-dukan.html" style="color:#B9C7D6;text-decoration:none">दवा दुकान</a>
           <a href="juden.html" style="color:#B9C7D6;text-decoration:none">जुड़ें</a>
           <a href="jankari.html" style="color:#B9C7D6;text-decoration:none">जानकारी</a>
+        </div>
+      </div>
+      <div style="font-family:'Mukta',sans-serif" class="text-sm">
+        <div style="color:#fff" class="font-bold mb-2">संस्था व नीति</div>
+        <div class="grid gap-1">
+          <a href="about.html" style="color:#B9C7D6;text-decoration:none">हमारे बारे में</a>
+          <a href="disclaimer.html" style="color:#B9C7D6;text-decoration:none">चिकित्सा अस्वीकरण</a>
+          <a href="privacy.html" style="color:#B9C7D6;text-decoration:none">गोपनीयता नीति</a>
+          <a href="contact.html" style="color:#B9C7D6;text-decoration:none">संपर्क करें</a>
         </div>
       </div>
     </div>

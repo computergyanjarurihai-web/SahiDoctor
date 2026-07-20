@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<script>
+/* Make React tolerant of Google Translate's DOM changes (prevents crashes) */
+(function () {
+  if (typeof Node === "function" && Node.prototype) {
+    var rc = Node.prototype.removeChild;
+    Node.prototype.removeChild = function (c) { if (c.parentNode !== this) { return c; } return rc.apply(this, arguments); };
+    var ib = Node.prototype.insertBefore;
+    Node.prototype.insertBefore = function (n, r) { if (r && r.parentNode !== this) { return n; } return ib.apply(this, arguments); };
+  }
+})();
+</script>
+<style>
+  #lang-bar { background:#0F766E; color:#fff; padding:5px 12px; font-size:13px; display:flex; align-items:center; gap:8px; justify-content:center; font-family:system-ui,sans-serif; flex-wrap:wrap; }
+  #lang-bar .goog-te-combo { font-size:14px; padding:3px 8px; border-radius:6px; border:none; margin:0; max-width:200px; }
+  .goog-te-gadget { font-size:0 !important; }
+  .goog-te-gadget span, .goog-logo-link { display:none !important; }
+  .goog-te-banner-frame, .skiptranslate iframe { display:none !important; }
+  body { top:0 !important; position:static !important; }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>हमारे बारे में — सहीDoctor | हिंदी स्वास्थ्य मार्गदर्शन</title>
+<meta name="description" content="सहीDoctor एक मुफ़्त हिंदी-प्रथम स्वास्थ्य मार्गदर्शन वेबसाइट है। जानें हमारा मिशन, यह क्या करता है और किसने बनाया — Quaitronix की जनहित पहल।">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1D3557">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="सहीDoctor">
+<link rel="canonical" href="https://sahidoctor.in/about.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="SahiDoctor · Quaitronix">
+<meta name="geo.region" content="IN"><meta name="geo.placename" content="India">
+<meta property="og:type" content="website"><meta property="og:site_name" content="सहीDoctor">
+<meta property="og:title" content="हमारे बारे में — सहीDoctor | हिंदी स्वास्थ्य मार्गदर्शन"><meta property="og:description" content="सहीDoctor एक मुफ़्त हिंदी-प्रथम स्वास्थ्य मार्गदर्शन वेबसाइट है। जानें हमारा मिशन, यह क्या करता है और किसने बनाया — Quaitronix की जनहित पहल।">
+<meta property="og:url" content="https://sahidoctor.in/about.html"><meta property="og:image" content="https://sahidoctor.in/og-image.png">
+<meta property="og:locale" content="hi_IN">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="हमारे बारे में — सहीDoctor | हिंदी स्वास्थ्य मार्गदर्शन"><meta name="twitter:description" content="सहीDoctor एक मुफ़्त हिंदी-प्रथम स्वास्थ्य मार्गदर्शन वेबसाइट है। जानें हमारा मिशन, यह क्या करता है और किसने बनाया — Quaitronix की जनहित पहल।"><meta name="twitter:image" content="https://sahidoctor.in/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"सहीDoctor","item":"https://sahidoctor.in/"},
+{"@type":"ListItem","position":2,"name":"हमारे बारे में","item":"https://sahidoctor.in/about.html"}]}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html,body{min-height:100%;}
+  body{
+    margin:0;
+    background-color:#E8F5EA;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M20 13h4v7h7v4h-7v7h-4v-7h-7v-4h7z' fill='%230F766E' fill-opacity='0.045'/%3E%3C/svg%3E"),
+      linear-gradient(165deg,#EEF8F0 0%,#DEF1E2 50%,#CDE9D5 100%);
+    background-repeat: repeat, no-repeat;
+    background-size: 44px 44px, 100% 100%;
+    background-attachment: scroll, scroll;
+  }
+</style>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap');
+  .prose-hi h2{font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.35rem;font-weight:800;margin:1.4rem 0 .5rem}
+  .prose-hi h3{font-family:'Tiro Devanagari Hindi',serif;color:#0F766E;font-size:1.1rem;font-weight:700;margin:1rem 0 .35rem}
+  .prose-hi p,.prose-hi li{font-family:'Mukta',sans-serif;color:#1D3557;font-size:1rem;line-height:1.75}
+  .prose-hi ul{margin:.4rem 0 .8rem;padding-left:1.2rem;list-style:disc}
+  .prose-hi li{margin:.25rem 0}
+  .prose-hi a{color:#0F766E;font-weight:600}
+  .prose-hi b{color:#1D3557}
+</style>
+</head>
+<body>
+<div id="lang-bar"><span>🌐 अपनी भाषा चुनें / Choose your language:</span><div id="google_translate_element"></div></div>
+<header style="background:#1D3557" class="px-4 py-4">
+  <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-2">
+    <div>
+      <a href="index.html" style="font-family:'Tiro Devanagari Hindi',serif;color:#fff;text-decoration:none" class="text-2xl font-extrabold leading-tight block">सही<span style="color:#E8930C">Doctor</span></a>
+      <div style="font-family:'Mukta',sans-serif;color:#B9C7D6" class="text-xs">लक्षण पहचानें · सही डॉक्टर चुनें · फ़ीस तुलना करें</div>
+    </div>
+    <nav class="flex gap-1 flex-wrap">
+            <a href="lakshan-janch.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">लक्षण जाँच</a>
+            <a href="bimari-guide.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">बीमारी गाइड</a>
+            <a href="doctor-khojen.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">डॉक्टर खोजें</a>
+            <a href="lab-janch.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जाँच-लैब</a>
+            <a href="sarkari-aspatal.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">सरकारी अस्पताल</a>
+            <a href="ambulance.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">🚑 एम्बुलेंस</a>
+            <a href="dawa-dukan.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">💊 दवा दुकान</a>
+            <a href="juden.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">➕ जुड़ें</a>
+            <a href="jankari.html" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जानकारी</a>
+    </nav>
+  </div>
+</header>
+<main class="max-w-3xl mx-auto px-4 py-8">
+  <nav style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-3"><a href="index.html" style="color:#0F766E;text-decoration:none">मुख्य पृष्ठ</a> › हमारे बारे में</nav>
+  <div class="prose-hi rounded-xl p-6" style="background:#FBF8F1;border:1px solid #E5DFD2;box-shadow:0 4px 16px rgba(29,53,87,.06)">
+    <h1 style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.7rem;font-weight:800;margin:0 0 .6rem">हमारे बारे में</h1>
+    <p><b>सहीDoctor</b> एक मुफ़्त, हिंदी-प्रथम स्वास्थ्य मार्गदर्शन वेबसाइट है। इसका मक़सद आसान है — आम आदमी को सरल हिंदी में यह समझाना कि किस लक्षण में <b>कौन-सा विशेषज्ञ डॉक्टर</b> देखे, अपने शहर में <b>कम फ़ीस वाले नज़दीकी डॉक्टर</b> कैसे खोजे, और ज़रूरत पड़ने पर सरकारी अस्पताल, एम्बुलेंस व दवा दुकान की जानकारी एक ही जगह पाए।</p>
+    <h2>हमारा मिशन</h2>
+    <p>भारत में बहुत से लोग सिर्फ़ इसलिए ग़लत डॉक्टर के पास चले जाते हैं या इलाज में देर कर देते हैं क्योंकि उन्हें पता ही नहीं होता कि किस समस्या के लिए किस विशेषज्ञ को दिखाना चाहिए। सहीDoctor इसी दूरी को पाटने के लिए बना है — <b>बिना किसी फ़ीस, बिना रजिस्ट्रेशन, आसान हिंदी में।</b></p>
+    <h2>यहाँ आपको क्या मिलता है</h2>
+    <ul>
+      <li><b>लक्षण जांच</b> — लक्षण चुनें और जानें कौन-सा विशेषज्ञ देखे</li>
+      <li><b>बीमारी गाइड</b> — आम बीमारियों के लक्षण और खतरे के निशान</li>
+      <li><b>डॉक्टर खोजें</b> — राज्य, ज़िला, तहसील या PIN से नज़दीकी डॉक्टर व फ़ीस</li>
+      <li><b>जांच व लैब, सरकारी अस्पताल, एम्बुलेंस (108) और दवा दुकान</b> की जानकारी</li>
+    </ul>
+    <h2>यह क्या नहीं है</h2>
+    <p>सहीDoctor <b>चिकित्सीय सलाह, निदान या इलाज नहीं देता।</b> यह केवल शैक्षिक मार्गदर्शन है ताकि आप सही दिशा में क़दम बढ़ा सकें। किसी भी बीमारी की पुष्टि और इलाज हमेशा योग्य डॉक्टर से ही कराएँ। ज़्यादा जानकारी के लिए हमारा <a href="disclaimer.html">चिकित्सा अस्वीकरण</a> पढ़ें।</p>
+    <h2>यह किसने बनाया</h2>
+    <p>सहीDoctor, <b>Quaitronix</b> की एक जनहित पहल है, जिसका उद्देश्य तकनीक के ज़रिये आम लोगों तक भरोसेमंद स्वास्थ्य जानकारी हिंदी में पहुँचाना है। सुझाव, सुधार या सूची में शामिल होने के लिए हमसे <a href="contact.html">संपर्क</a> करें या <a href="juden.html">जुड़ें</a>।</p>
+    <h2>जानकारी की सटीकता</h2>
+    <p>हम जानकारी सार्वजनिक स्रोतों और मानचित्र सेवाओं से जुटाते हैं और इसे सही रखने की पूरी कोशिश करते हैं। फिर भी कोई भी जानकारी उपयोग करने से पहले संबंधित डॉक्टर/अस्पताल से पुष्टि ज़रूर कर लें। कोई त्रुटि दिखे तो कृपया <a href="contact.html">हमें बताएँ</a> — हम उसे जल्द ठीक करेंगे।</p>
+  </div>
+</main>
+<footer style="background:#16283F;color:#B9C7D6" class="py-8 mt-4">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="grid md:grid-cols-4 gap-6 mb-6" style="font-family:'Mukta',sans-serif">
+      <div>
+        <div style="font-family:'Tiro Devanagari Hindi',serif;color:#fff" class="text-lg font-bold mb-2">सहीDoctor</div>
+        <p style="color:#8FA3B5" class="text-sm">हिंदी-प्रथम, मुफ़्त स्वास्थ्य नेविगेशन। लक्षण से सही डॉक्टर तक।</p>
+      </div>
+      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">सेवाएं</div><div class="grid gap-1">
+        <a href="lakshan-janch.html" style="color:#B9C7D6;text-decoration:none">लक्षण जांच</a>
+        <a href="bimari-guide.html" style="color:#B9C7D6;text-decoration:none">बीमारी गाइड</a>
+        <a href="doctor-khojen.html" style="color:#B9C7D6;text-decoration:none">डॉक्टर खोजें</a>
+        <a href="sarkari-aspatal.html" style="color:#B9C7D6;text-decoration:none">सरकारी अस्पताल</a></div></div>
+      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">और जानकारी</div><div class="grid gap-1">
+        <a href="ambulance.html" style="color:#B9C7D6;text-decoration:none">एम्बुलेंस (108)</a>
+        <a href="dawa-dukan.html" style="color:#B9C7D6;text-decoration:none">दवा दुकान</a>
+        <a href="lab-janch.html" style="color:#B9C7D6;text-decoration:none">जांच व लैब</a>
+        <a href="juden.html" style="color:#B9C7D6;text-decoration:none">जुड़ें</a></div></div>
+      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">संस्था व नीति</div><div class="grid gap-1">
+        <a href="about.html" style="color:#B9C7D6;text-decoration:none">हमारे बारे में</a>
+        <a href="disclaimer.html" style="color:#B9C7D6;text-decoration:none">चिकित्सा अस्वीकरण</a>
+        <a href="privacy.html" style="color:#B9C7D6;text-decoration:none">गोपनीयता नीति</a>
+        <a href="contact.html" style="color:#B9C7D6;text-decoration:none">संपर्क करें</a></div></div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.12);font-family:'Mukta',sans-serif;color:#7C90A2" class="pt-4 text-xs flex justify-between flex-wrap gap-2">
+      <span>© 2026 सहीDoctor · Quaitronix</span><span>शैक्षिक जानकारी — चिकित्सीय सलाह नहीं।</span>
+    </div>
+  </div>
+</footer>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () {});
+    });
+  }
+</script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "hi",
+    includedLanguages: "en,hi,pa,bn,ta,te,mr,gu,kn,ml,ur,or,as,mai,ne,sd,kok",
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, "google_translate_element");
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
