@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<script>
+/* Make React tolerant of Google Translate's DOM changes (prevents crashes) */
+(function () {
+  if (typeof Node === "function" && Node.prototype) {
+    var rc = Node.prototype.removeChild;
+    Node.prototype.removeChild = function (c) { if (c.parentNode !== this) { return c; } return rc.apply(this, arguments); };
+    var ib = Node.prototype.insertBefore;
+    Node.prototype.insertBefore = function (n, r) { if (r && r.parentNode !== this) { return n; } return ib.apply(this, arguments); };
+  }
+})();
+</script>
+<style>
+  #lang-bar { background:#0F766E; color:#fff; padding:5px 12px; font-size:13px; display:flex; align-items:center; gap:8px; justify-content:center; font-family:system-ui,sans-serif; flex-wrap:wrap; }
+  #lang-bar .goog-te-combo { font-size:14px; padding:3px 8px; border-radius:6px; border:none; margin:0; max-width:200px; }
+  .goog-te-gadget { font-size:0 !important; }
+  .goog-te-gadget span, .goog-logo-link { display:none !important; }
+  .goog-te-banner-frame, .skiptranslate iframe { display:none !important; }
+  body { top:0 !important; position:static !important; }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>लक्षण जांच — कौन-सा डॉक्टर देखें? | सहीDoctor</title>
+<meta name="description" content="अपने लक्षण चुनें और जानें किस विशेषज्ञ डॉक्टर के पास जाना चाहिए। बुखार, सीने में दर्द, पेट दर्द, सिरदर्द व अन्य लक्षणों के लिए सही specialist — हिंदी में, बिल्कुल मुफ़्त।">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1D3557">
+<link rel="apple-touch-icon" href="/icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="सहीDoctor">
+
+<!-- SEO -->
+<link rel="canonical" href="https://sahidoctor.in/lakshan-janch.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="author" content="SahiDoctor · Quaitronix">
+<meta name="geo.region" content="IN">
+<meta name="geo.placename" content="India">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="सहीDoctor">
+<meta property="og:title" content="लक्षण जांच — कौन-सा डॉक्टर देखें? | सहीDoctor">
+<meta property="og:description" content="अपने लक्षण चुनें और जानें किस विशेषज्ञ डॉक्टर के पास जाना चाहिए। बुखार, सीने में दर्द, पेट दर्द, सिरदर्द व अन्य लक्षणों के लिए सही specialist — हिंदी में, बिल्कुल मुफ़्त।">
+<meta property="og:url" content="https://sahidoctor.in/lakshan-janch.html">
+<meta property="og:image" content="https://sahidoctor.in/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="hi_IN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="लक्षण जांच — कौन-सा डॉक्टर देखें? | सहीDoctor">
+<meta name="twitter:description" content="अपने लक्षण चुनें और जानें किस विशेषज्ञ डॉक्टर के पास जाना चाहिए। बुखार, सीने में दर्द, पेट दर्द, सिरदर्द व अन्य लक्षणों के लिए सही specialist — हिंदी में, बिल्कुल मुफ़्त।">
+<meta name="twitter:image" content="https://sahidoctor.in/og-image.png">
+
+<!-- Breadcrumb structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "सहीDoctor", "item": "https://sahidoctor.in/" },
+    { "@type": "ListItem", "position": 2, "name": "लक्षण जांच — कौन-सा डॉक्टर देखें", "item": "https://sahidoctor.in/lakshan-janch.html" }
+  ]
+}
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html,body{min-height:100%;}
+  body{
+    margin:0;
+    background-color:#E8F5EA;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M20 13h4v7h7v4h-7v7h-4v-7h-7v-4h7z' fill='%230F766E' fill-opacity='0.045'/%3E%3C/svg%3E"),
+      linear-gradient(165deg,#EEF8F0 0%,#DEF1E2 50%,#CDE9D5 100%);
+    background-repeat: repeat, no-repeat;
+    background-size: 44px 44px, 100% 100%;
+    background-attachment: scroll, scroll;
+  }
+</style>
+</head>
+<body>
+<div id="lang-bar">
+  <span>🌐 अपनी भाषा चुनें / Choose your language:</span>
+  <div id="google_translate_element"></div>
+</div>
+<div id="root">
+  <div style="max-width:820px;margin:0 auto;padding:24px;font-family:system-ui,sans-serif;color:#1D3557;line-height:1.6;">
+    <h1>लक्षण जांच — कौन-सा डॉक्टर देखें — सहीDoctor</h1>
+    <p>अपने लक्षण चुनें और जानें किस विशेषज्ञ डॉक्टर के पास जाना चाहिए। बुखार, खाँसी, पेट दर्द, सीने में दर्द, जोड़ों का दर्द और अन्य लक्षणों के लिए सही specialist का मार्गदर्शन — सरल हिंदी में।</p>
+    <p><a href="index.html">← मुख्य पृष्ठ</a> · यह वेबसाइट शैक्षिक जानकारी देती है, चिकित्सीय सलाह नहीं। गंभीर लक्षण में तुरंत डॉक्टर से मिलें या 108 पर कॉल करें।</p>
+    <p>ऐप लोड हो रहा है… Loading SahiDoctor…</p>
+  </div>
+</div>
+<script>window.SD_ACTIVE_TAB = "checker";</script>
+<script type="text/babel" src="sd-app.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("/sw.js").catch(function () {});
+    });
+  }
+</script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: "hi",
+    includedLanguages: "en,hi,pa,bn,ta,te,mr,gu,kn,ml,ur,or,as,mai,ne,sd,kok",
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, "google_translate_element");
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
