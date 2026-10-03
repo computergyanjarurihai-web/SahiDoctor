@@ -31,7 +31,7 @@
 })();
 </script>
 <style>
-  #lang-bar { background:#0F766E; color:#fff; padding:5px 12px; font-size:13px; display:flex; align-items:center; gap:8px; justify-content:center; font-family:system-ui,sans-serif; flex-wrap:wrap; }
+  #lang-bar { min-height:36px; box-sizing:border-box; background:#0F766E; color:#fff; padding:5px 12px; font-size:13px; display:flex; align-items:center; gap:8px; justify-content:center; font-family:system-ui,sans-serif; flex-wrap:wrap; }
   #lang-bar .goog-te-combo { font-size:14px; padding:3px 8px; border-radius:6px; border:none; margin:0; max-width:200px; }
   .goog-te-gadget { font-size:0 !important; }
   .goog-te-gadget span, .goog-logo-link { display:none !important; }
@@ -59,9 +59,9 @@
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
 <!-- Fonts: preload (non-blocking) -->
-<script>/* Fonts page dikhne ke baad load hon, taaki page jaldi khule */
-window.addEventListener("load",function(){var l=document.createElement("link");l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Mukta:wght@400;500;600;700&display=swap";document.head.appendChild(l);});</script>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Mukta:wght@400;500;600;700&display=swap"></noscript>
+<!-- Fonts: non-blocking + display=optional (page jaldi khule, text hile nahi) -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Mukta:wght@400;500;600;700&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Mukta:wght@400;500;600;700&display=optional"></noscript>
 
 <!-- SEO -->
 <link rel="canonical" href="https://sahidoctor.in/">
@@ -125,7 +125,7 @@ window.addEventListener("load",function(){var l=document.createElement("link");l
 
 <div id="lang-bar">
   <span>🌐 अपनी भाषा चुनें / Choose your language:</span>
-  <div id="google_translate_element"></div>
+  <div id="google_translate_element" style="min-height:26px;min-width:120px"></div>
 </div>
 
 <!-- ===== HEADER ===== -->
