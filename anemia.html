@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+<!-- सहीDoctor disease page. Template वही है जो dengue.html का है। -->
 <meta charset="UTF-8">
-<script>
-/* Make React tolerant of Google Translate's DOM changes (prevents crashes) */
-(function () {
-  if (typeof Node === "function" && Node.prototype) {
-    var rc = Node.prototype.removeChild;
-    Node.prototype.removeChild = function (c) { if (c.parentNode !== this) { return c; } return rc.apply(this, arguments); };
-    var ib = Node.prototype.insertBefore;
-    Node.prototype.insertBefore = function (n, r) { if (r && r.parentNode !== this) { return n; } return ib.apply(this, arguments); };
-  }
-})();
-</script>
-<style>
-  #lang-bar { background:#0F766E; color:#fff; padding:5px 12px; font-size:13px; display:flex; align-items:center; gap:8px; justify-content:center; font-family:system-ui,sans-serif; flex-wrap:wrap; }
-  #lang-bar .goog-te-combo { font-size:14px; padding:3px 8px; border-radius:6px; border:none; margin:0; max-width:200px; }
-  .goog-te-gadget { font-size:0 !important; }
-  .goog-te-gadget span, .goog-logo-link { display:none !important; }
-  .goog-te-banner-frame, .skiptranslate iframe { display:none !important; }
-  body { top:0 !important; position:static !important; }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>खून की कमी (Anemia) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor</title>
-<meta name="description" content="खून की कमी (Anemia) के आम लक्षण: थकान, कमज़ोरी, चेहरा/नाखून पीले, साँस जल्दी फूलना। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।">
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#1D3557">
-<link rel="apple-touch-icon" href="/icons/icon-180.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="सहीDoctor">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>खून की कमी (Anemia): कारण, लक्षण, Hemoglobin की normal range, आयरन की गोली और खान-पान | सहीDoctor</title>
+<meta name="description" content="खून की कमी क्या है, Hemoglobin कितना होना चाहिए, कारण, लक्षण, खतरे के संकेत, जाँच, आयरन की गोली लेने का सही तरीका, आयरन वाला खाना, गर्भावस्था और बच्चों में एनीमिया, थैलेसीमिया — आसान हिंदी में।">
 <link rel="canonical" href="https://sahidoctor.in/anemia">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="author" content="SahiDoctor · Quaitronix">
-<meta name="geo.region" content="IN"><meta name="geo.placename" content="India">
-<meta property="og:type" content="article"><meta property="og:site_name" content="सहीDoctor">
-<meta property="og:title" content="खून की कमी (Anemia) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor"><meta property="og:description" content="खून की कमी (Anemia) के आम लक्षण: थकान, कमज़ोरी, चेहरा/नाखून पीले, साँस जल्दी फूलना। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।">
-<meta property="og:url" content="https://sahidoctor.in/anemia"><meta property="og:image" content="https://sahidoctor.in/og-image.png">
-<meta property="og:locale" content="hi_IN">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="खून की कमी (Anemia) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor"><meta name="twitter:description" content="खून की कमी (Anemia) के आम लक्षण: थकान, कमज़ोरी, चेहरा/नाखून पीले, साँस जल्दी फूलना। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।"><meta name="twitter:image" content="https://sahidoctor.in/og-image.png">
+<meta property="og:title" content="खून की कमी (Anemia) — आसान हिंदी में">
+<meta property="og:description" content="खून की कमी क्या है, Hemoglobin कितना होना चाहिए, कारण, लक्षण, खतरे के संकेत, जाँच, आयरन की गोली लेने का सही तरीका, आयरन वाला खाना, गर्भावस्था और बच्चों में एनीमिया, थैलेसीमिया — आसान हिंदी में।">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sahidoctor.in/anemia">
+<meta name="theme-color" content="#0f5c4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"खून की कमी (Anemia)","inLanguage":"hi","url":"https://sahidoctor.in/anemia","description":"खून की कमी (Anemia) के आम लक्षण: थकान, कमज़ोरी, चेहरा/नाखून पीले, साँस जल्दी फूलना। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।","publisher":{"@type":"Organization","name":"सहीDoctor"},"about":{"@type":"MedicalCondition","name":"खून की कमी","alternateName":"Anemia"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"सहीDoctor","item":"https://sahidoctor.in/"},
-{"@type":"ListItem","position":2,"name":"बीमारी गाइड","item":"https://sahidoctor.in/bimari-guide"},
-{"@type":"ListItem","position":3,"name":"खून की कमी","item":"https://sahidoctor.in/anemia"}]}
+{
+ "@context": "https://schema.org",
+ "@type": "MedicalWebPage",
+ "name": "खून की कमी (Anemia) — आसान हिंदी में",
+ "url": "https://sahidoctor.in/anemia",
+ "inLanguage": "hi",
+ "dateModified": "2026-10-05",
+ "about": {
+  "@type": "MedicalCondition",
+  "name": "Anaemia",
+  "alternateName": "खून की कमी",
+  "signOrSymptom": [
+   {
+    "@type": "MedicalSymptom",
+    "name": "थकान और कमज़ोरी"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "पीलापन"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "साँस फूलना"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "चक्कर"
+   }
+  ]
+ },
+ "audience": {
+  "@type": "PeopleAudience",
+  "geographicArea": "India"
+ }
+}
 </script>
 <script type="application/ld+json">
 {
@@ -56,180 +59,267 @@
  "mainEntity": [
   {
    "@type": "Question",
-   "name": "खून की कमी के मुख्य लक्षण क्या हैं?",
+   "name": "क्या चुकंदर और अनार से खून जल्दी बढ़ता है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "खून की कमी के आम लक्षण हैं: थकान, कमज़ोरी, चेहरा/नाखून पीले, साँस जल्दी फूलना, चक्कर, धड़कन तेज़, नाख़ून चम्मच जैसे। लक्षण हर व्यक्ति में अलग हो सकते हैं, इसलिए पुष्टि जाँच व डॉक्टर से ही होती है।"
+    "text": "इनमें आयरन बहुत ज़्यादा नहीं होता। ये अच्छे खाने का हिस्सा हैं, पर आयरन की कमी में डॉक्टर की दी हुई गोली ज़रूरी है।"
    }
   },
   {
    "@type": "Question",
-   "name": "खून की कमी में कब तुरंत डॉक्टर के पास जाना चाहिए?",
+   "name": "आयरन की गोली से मल काला क्यों होता है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "इन खतरे के निशानों पर देर न करें: बेहोशी, सीने में दर्द। गंभीर स्थिति में तुरंत नज़दीकी अस्पताल जाएँ या 108 पर कॉल करें।"
+    "text": "यह आयरन का सामान्य असर है और नुकसानदेह नहीं। पर बिना आयरन लिए काला मल हो तो डॉक्टर को दिखाएँ।"
    }
   },
   {
    "@type": "Question",
-   "name": "खून की कमी के लिए कौन-सा डॉक्टर दिखाएँ?",
+   "name": "Hemoglobin कितने दिन में बढ़ता है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "आम तौर पर जनरल फ़िज़िशियन (General Physician) को दिखाया जाता है। सहीDoctor के 'डॉक्टर खोजें' पेज पर अपने इलाक़े के नज़दीकी जनरल फ़िज़िशियन (General Physician) ढूँढ सकते हैं।"
+    "text": "सही इलाज से 2–4 हफ्तों में बढ़ना शुरू होता है और 2–3 महीने में सामान्य हो जाता है।"
    }
   },
   {
    "@type": "Question",
-   "name": "खून की कमी के बारे में ज़रूरी बात क्या है?",
+   "name": "थैलेसीमिया trait क्या है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "भारत में महिलाओं व बच्चों में बेहद आम। हरी सब्ज़ी, गुड़, आयरन की गोली — पर पहले जाँच।"
+    "text": "इसमें व्यक्ति स्वस्थ रहता है और हल्की खून की कमी हो सकती है। अगर पति-पत्नी दोनों में trait हो तो बच्चे को गंभीर थैलेसीमिया हो सकता है, इसलिए शादी या गर्भावस्था से पहले जाँच कराएँ।"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "क्या गुड़ खाने से खून बढ़ता है?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "गुड़ में थोड़ा आयरन होता है। गुड़-चना अच्छा नाश्ता है, पर यह दवा की जगह नहीं ले सकता।"
    }
   }
  ]
 }
 </script>
-<link rel="stylesheet" href="tailwind.css">
 <style>
-  html,body{min-height:100%;}
-  body{
-    margin:0;
-    background-color:#E8F5EA;
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M20 13h4v7h7v4h-7v7h-4v-7h-7v-4h7z' fill='%230F766E' fill-opacity='0.045'/%3E%3C/svg%3E"),
-      linear-gradient(165deg,#EEF8F0 0%,#DEF1E2 50%,#CDE9D5 100%);
-    background-repeat: repeat, no-repeat;
-    background-size: 44px 44px, 100% 100%;
-    background-attachment: scroll, scroll;
+  :root{
+    --green:#0f5c4d;
+    --green-soft:#e3f0ec;
+    --ink:#1c2b2a;
+    --muted:#526462;
+    --paper:#ffffff;
+    --bg:#f2f6f5;
+    --line:#d5e2df;
+    --red:#b42318;
+    --red-soft:#fdecea;
+    --amber:#93500a;
+    --amber-soft:#fdf3e1;
   }
-</style>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap');
-  .prose-hi h2{font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.3rem;font-weight:800;margin:1.3rem 0 .5rem}
-  .prose-hi h3{font-family:'Tiro Devanagari Hindi',serif;color:#0F766E;font-size:1.1rem;font-weight:700}
-  .prose-hi p,.prose-hi li{font-family:'Mukta',sans-serif;color:#1D3557;font-size:1rem;line-height:1.75}
-  .prose-hi ul{margin:.4rem 0 .8rem;padding-left:1.2rem;list-style:disc} .prose-hi li{margin:.25rem 0}
-  .prose-hi a{color:#0F766E} .prose-hi b{color:#1D3557}
-  .sd-faq-item{border:1px solid #E5DFD2;border-radius:10px;margin-bottom:.5rem;background:#fff}
-  .sd-faq-item summary{font-family:'Mukta',sans-serif;font-weight:600;color:#1D3557;cursor:pointer;padding:.65rem .9rem;list-style:none;font-size:.98rem}
-  .sd-faq-item summary::-webkit-details-marker{display:none}
-  .sd-faq-item summary::before{content:"＋";color:#0F766E;font-weight:700;margin-right:.5rem}
-  .sd-faq-item[open] summary::before{content:"－"}
-  .sd-faq-a{font-family:'Mukta',sans-serif;color:#45606f;font-size:.95rem;line-height:1.7;padding:0 .9rem .8rem 2rem}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Mukta","Nirmala UI","Mangal",system-ui,sans-serif;
+    font-size:18px;line-height:1.7;
+  }
+  a{color:var(--green)}
+  a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+  h1,h2{font-family:"Tiro Devanagari Hindi","Nirmala UI","Mangal",serif;font-weight:400;line-height:1.3}
+
+  /* Header */
+  .top{background:var(--green);color:#fff}
+  .top-in{max-width:760px;margin:0 auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center}
+  .logo{color:#fff;text-decoration:none;font-weight:700;font-size:22px}
+  .logo span{font-weight:400;opacity:.85}
+  .top a.call{color:#fff;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,.6);padding:4px 12px;border-radius:6px;font-size:16px}
+
+  /* Section nav */
+  .toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+  .toc ul{max-width:760px;margin:0 auto;padding:10px 18px;list-style:none;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .toc ul::-webkit-scrollbar{display:none}
+  .toc a{display:block;white-space:nowrap;text-decoration:none;font-size:15px;padding:4px 12px;border-radius:999px;background:var(--green-soft);color:var(--green)}
+  .toc a.warn{background:var(--red-soft);color:var(--red);font-weight:600}
+
+  main{max-width:760px;margin:0 auto;padding:8px 18px 40px}
+  .crumb{font-size:15px;color:var(--muted);margin:16px 0 0}
+  .crumb a{color:var(--muted)}
+  h1{font-size:2.2rem;margin:6px 0 8px}
+  .lead{font-size:1.15rem;color:var(--muted);margin:0 0 18px}
+  .meta{font-size:15px;color:var(--muted);border-left:3px solid var(--green);padding-left:12px;margin-bottom:24px}
+
+  /* Quick facts */
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 28px}
+  .facts div{background:var(--paper);padding:12px 14px}
+  .facts dt{font-size:14px;color:var(--muted)}
+  .facts dd{margin:0;font-weight:600;line-height:1.4}
+
+  section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:6px 22px 18px;margin-bottom:18px}
+  h2{font-size:1.55rem;margin:18px 0 8px;color:var(--green)}
+  h3{font-size:1.1rem;margin:18px 0 4px}
+  ul.list{padding-left:22px;margin:8px 0}
+  ul.list li{margin-bottom:6px}
+  .note{background:var(--amber-soft);border-left:4px solid var(--amber);padding:10px 14px;border-radius:0 8px 8px 0;margin:14px 0;font-size:17px}
+
+  /* Emergency card — the one loud element on the page */
+  section.danger{background:var(--red-soft);border:2px solid var(--red)}
+  section.danger h2{color:var(--red)}
+  .danger ul.list li::marker{color:var(--red)}
+  .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:8px;margin:8px 8px 0 0;font-size:17px}
+  .btn.alt{background:#fff;color:var(--red);border:2px solid var(--red)}
+
+  table{width:100%;border-collapse:collapse;font-size:16px;margin:10px 0}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--green-soft);color:var(--green);font-weight:600}
+  .tablewrap{overflow-x:auto}
+
+  .dont li::marker{content:"✕  ";color:var(--red);font-weight:700}
+
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:0}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+  details[open] summary::after{content:"−"}
+  details p{margin:8px 0 0;color:var(--ink)}
+
+  .sources li{font-size:16px}
+
+  footer{background:var(--ink);color:#c9d6d4;font-size:15px}
+  footer .in{max-width:760px;margin:0 auto;padding:22px 18px}
+  footer a{color:#fff}
+
+  @media (max-width:520px){
+    body{font-size:17px}
+    h1{font-size:1.85rem}
+    section{padding:4px 16px 16px}
+    .facts{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
-<div id="lang-bar"><span>🌐 अपनी भाषा चुनें / Choose your language:</span><div id="google_translate_element"></div></div>
-<header style="background:#1D3557" class="px-4 py-4">
-  <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-2">
-    <div>
-      <a href="/" style="font-family:'Tiro Devanagari Hindi',serif;color:#fff;text-decoration:none" class="text-2xl font-extrabold leading-tight block">सही<span style="color:#E8930C">Doctor</span></a>
-      <div style="font-family:'Mukta',sans-serif;color:#B9C7D6" class="text-xs">लक्षण पहचानें · सही डॉक्टर चुनें · फ़ीस तुलना करें</div>
-    </div>
-    <nav class="flex gap-1 flex-wrap">
-            <a href="lakshan-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">लक्षण जाँच</a>
-            <a href="bimari-guide" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">बीमारी गाइड</a>
-            <a href="doctor-khojen" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">डॉक्टर खोजें</a>
-            <a href="lab-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जाँच-लैब</a>
-            <a href="sarkari-aspatal" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">सरकारी अस्पताल</a>
-            <a href="ambulance" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">🚑 एम्बुलेंस</a>
-            <a href="dawa-dukan" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">💊 दवा दुकान</a>
-            <a href="juden" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">➕ जुड़ें</a>
-            <a href="jankari" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जानकारी</a>
-    </nav>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/">सही<span>Doctor</span></a>
+    <a class="call" href="tel:108">Ambulance 108</a>
   </div>
 </header>
-<main class="max-w-3xl mx-auto px-4 py-8">
-  <nav style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-3"><a href="/" style="color:#0F766E;text-decoration:none">मुख्य पृष्ठ</a> › <a href="bimari-guide" style="color:#0F766E;text-decoration:none">बीमारी गाइड</a> › खून की कमी</nav>
-  <div class="prose-hi rounded-xl p-6" style="background:#FBF8F1;border:1px solid #E5DFD2;box-shadow:0 4px 16px rgba(29,53,87,.06)">
-    <h1 style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.7rem;font-weight:800;margin:0 0 .6rem">खून की कमी <span style="color:#0F766E;font-size:1.1rem">(Anemia)</span></h1>
 
-    <span style="font-family:'Mukta',sans-serif;background:#FDF1DC;color:#B5730B;border:1px solid #F0D9A8;border-radius:999px;padding:2px 12px;font-size:.8rem;display:inline-block;margin-bottom:.6rem">श्रेणी: आम / General</span>
-    <p>खून की कमी (Anemia) से जुड़ी आम जानकारी — इसके लक्षण, खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए, सरल हिंदी में। यह जानकारी केवल शैक्षिक है; किसी भी बीमारी की पुष्टि व इलाज योग्य डॉक्टर से ही कराएँ।</p>
+<nav class="toc" aria-label="इस page के हिस्से">
+  <ul><li><a href="#kya-hai">क्या है</a></li><li><a href="#karan">कारण</a></li><li><a href="#lakshan">लक्षण</a></li><li><a class="warn" href="#khatre">खतरे के संकेत</a></li><li><a href="#jaanch">जाँच</a></li><li><a href="#ilaj">इलाज</a></li><li><a href="#khana">खान-पान</a></li><li><a href="#garbh">गर्भावस्था</a></li><li><a href="#bachche">बच्चे</a></li><li><a href="#bujurg">बुज़ुर्ग</a></li><li><a href="#hospital">कब hospital</a></li><li><a href="#doctor">कौन-सा doctor</a></li><li><a href="#kya-na">क्या न करें</a></li><li><a href="#bachav">बचाव</a></li><li><a href="#faq">FAQ</a></li></ul>
+</nav>
 
-    <h2>खून की कमी के लक्षण</h2>
-    <ul>
-      <li>थकान, कमज़ोरी</li>
-      <li>चेहरा/नाखून पीले</li>
-      <li>साँस जल्दी फूलना</li>
-      <li>चक्कर</li>
-      <li>धड़कन तेज़</li>
-      <li>नाख़ून चम्मच जैसे</li>
-    </ul>
+<main>
+  <p class="crumb"><a href="/">होम</a> › <a href="/bimariyan">बीमारियाँ</a> › खून की कमी</p>
+  <h1>खून की कमी (Anemia)</h1>
+  <p class="lead">खून में hemoglobin कम होना, जिससे शरीर को पूरी oxygen नहीं मिलती। भारत में आधे से ज़्यादा महिलाएँ और बच्चे इससे प्रभावित हैं, और ज़्यादातर मामलों में यह आसानी से ठीक हो जाती है।</p>
+  <p class="meta">
+    Last updated: 5 अक्टूबर 2026<br>
+    यह जानकारी WHO और भारत सरकार के एनीमिया मुक्त भारत कार्यक्रम पर आधारित है।
+  </p>
+  <dl class="facts"><div><dt>सबसे आम कारण</dt><dd>आयरन की कमी</dd></div><div><dt>मुख्य जाँच</dt><dd>Hemoglobin (CBC)</dd></div><div><dt>आयरन गोली (IFA)</dt><dd>सरकारी केंद्र, ASHA, आंगनवाड़ी पर मुफ्त</dd></div><div><dt>सबसे ज़्यादा प्रभावित</dt><dd>महिलाएँ, गर्भवती, बच्चे, किशोरियाँ</dd></div></dl>
 
-    <h2>खतरे के निशान — कब तुरंत डॉक्टर के पास जाएँ</h2>
-    <div style="background:#FBEAE7;border:1px solid #E6b3ab;border-left:5px solid #C0392B;border-radius:10px;padding:.4rem 1rem .6rem">
-    <ul style="margin:.4rem 0">
-      <li>बेहोशी</li>
-      <li>सीने में दर्द</li>
-    </ul>
-    </div>
+  <section id="kya-hai">
+    <h2>खून की कमी क्या है?</h2>
+    <p>खून की लाल कोशिकाओं में <strong>hemoglobin</strong> होता है जो पूरे शरीर में oxygen पहुँचाता है। Hemoglobin कम होने पर शरीर के अंगों को कम oxygen मिलती है, इसे एनीमिया कहते हैं।</p><div class="tablewrap"><table><tr><th>व्यक्ति</th><th>Hemoglobin इससे कम हो तो एनीमिया (g/dL)</th></tr><tr><td>पुरुष</td><td>13</td></tr><tr><td>महिला</td><td>12</td></tr><tr><td>गर्भवती महिला</td><td>11</td></tr><tr><td>बच्चे 6 महीने से 5 साल</td><td>11</td></tr><tr><td>बच्चे 5 से 11 साल</td><td>11.5</td></tr><tr><td>किशोर 12 से 14 साल</td><td>12</td></tr></table></div>
+    
+  </section>
 
-    <h2>कौन-सा डॉक्टर दिखाएँ</h2>
-    <p>खून की कमी के लिए आम तौर पर <b>जनरल फ़िज़िशियन (General Physician)</b> को दिखाया जाता है।</p>
-    <p><a href="doctor-khojen?spec=General Physician" style="display:inline-block;background:#0F766E;color:#fff;font-family:'Tiro Devanagari Hindi',serif;font-weight:700;padding:.6rem 1.3rem;border-radius:10px;text-decoration:none">🔍 नज़दीकी General डॉक्टर खोजें →</a></p>
+  <section id="karan">
+    <h2>कारण</h2>
+    <ul class="list"><li><strong>आयरन की कमी</strong>: खाने में कम आयरन, सबसे आम कारण</li><li>माहवारी में ज़्यादा खून जाना</li><li>गर्भावस्था और बार-बार या जल्दी-जल्दी बच्चे होना</li><li><strong>पेट के कीड़े</strong>, खासकर बच्चों में</li><li>Vitamin B12 या folic acid की कमी (शाकाहारी लोगों में B12 की कमी आम)</li><li>छुपा खून बहना: बवासीर, पेट का अल्सर, आँत की बीमारी</li><li>मलेरिया, किडनी की बीमारी, लंबी बीमारियाँ</li><li>जन्मजात खून की बीमारियाँ: <strong>थैलेसीमिया, सिकल सेल</strong></li></ul>
+    
+  </section>
 
-    <h2>ज़रूरी बात</h2>
-    <p style="background:#E0F0EE;border-left:4px solid #0F766E;padding:.6rem .9rem;border-radius:8px">भारत में महिलाओं व बच्चों में बेहद आम। हरी सब्ज़ी, गुड़, आयरन की गोली — पर पहले जाँच।</p>
+  <section id="lakshan">
+    <h2>लक्षण</h2>
+    <ul class="list"><li>थकान, कमज़ोरी, जल्दी थक जाना</li><li>त्वचा, नाखून, जीभ और <strong>आँख की निचली पलक के अंदर</strong> पीलापन</li><li>सीढ़ी चढ़ने या काम करने पर साँस फूलना</li><li>धड़कन तेज़ होना, चक्कर, सिरदर्द</li><li>हाथ-पैर ठंडे रहना, बाल झड़ना, नाखून चम्मच जैसे मुड़ना</li><li>मिट्टी, चॉक, बर्फ़ या चावल खाने की इच्छा</li><li>पढ़ाई या काम में ध्यान न लगना</li></ul><p class="note">हल्के एनीमिया में अक्सर कोई लक्षण नहीं होता। Hemoglobin की जाँच सस्ती है और सरकारी केंद्रों पर मुफ्त होती है।</p>
+    
+  </section>
 
-    <h2>अक्सर पूछे जाने वाले सवाल</h2>
-      <details class="sd-faq-item"><summary>खून की कमी के मुख्य लक्षण क्या हैं?</summary><div class="sd-faq-a">खून की कमी के आम लक्षण हैं: थकान, कमज़ोरी, चेहरा/नाखून पीले, साँस जल्दी फूलना, चक्कर, धड़कन तेज़, नाख़ून चम्मच जैसे। लक्षण हर व्यक्ति में अलग हो सकते हैं, इसलिए पुष्टि जाँच व डॉक्टर से ही होती है।</div></details>
-      <details class="sd-faq-item"><summary>खून की कमी में कब तुरंत डॉक्टर के पास जाना चाहिए?</summary><div class="sd-faq-a">इन खतरे के निशानों पर देर न करें: बेहोशी, सीने में दर्द। गंभीर स्थिति में तुरंत नज़दीकी अस्पताल जाएँ या 108 पर कॉल करें।</div></details>
-      <details class="sd-faq-item"><summary>खून की कमी के लिए कौन-सा डॉक्टर दिखाएँ?</summary><div class="sd-faq-a">आम तौर पर जनरल फ़िज़िशियन (General Physician) को दिखाया जाता है। सहीDoctor के &#x27;डॉक्टर खोजें&#x27; पेज पर अपने इलाक़े के नज़दीकी जनरल फ़िज़िशियन (General Physician) ढूँढ सकते हैं।</div></details>
-      <details class="sd-faq-item"><summary>खून की कमी के बारे में ज़रूरी बात क्या है?</summary><div class="sd-faq-a">भारत में महिलाओं व बच्चों में बेहद आम। हरी सब्ज़ी, गुड़, आयरन की गोली — पर पहले जाँच।</div></details>
+  <section id="khatre" class="danger">
+    <h2>खतरे के संकेत (Warning signs)</h2>
+    <p>इनमें से कोई भी संकेत दिखे तो <strong>तुरंत hospital</strong> जाएँ:</p><ul class="list"><li>आराम करते समय भी साँस फूलना</li><li>सीने में दर्द या बहुत तेज़ धड़कन</li><li>बेहोशी</li><li><strong>काला मल</strong>, मल या उल्टी में खून</li><li>माहवारी या प्रसव के बाद बहुत ज़्यादा खून बहना</li><li>पैरों में सूजन के साथ साँस फूलना</li><li>गर्भवती महिला में Hemoglobin 7 से कम या बहुत कमज़ोरी</li></ul>
+    <a class="btn" href="tel:108">108 पर Call करें</a><a class="btn alt" href="tel:112">112 Emergency</a>
+  </section>
 
-    <h2>संदर्भ</h2>
-    <ol style="margin:.3rem 0 .4rem;padding-left:1.4rem;font-size:.95rem"><li style="margin:.25rem 0;word-break:break-word"><a href="https://www.who.int/news-room/fact-sheets/detail/anaemia" target="_blank" rel="noopener noreferrer" style="color:#0F766E">WHO — Anaemia fact sheet</a></li><li style="margin:.25rem 0;word-break:break-word"><a href="https://anemiamuktbharat.info/" target="_blank" rel="noopener noreferrer" style="color:#0F766E">एनीमिया मुक्त भारत (MoHFW)</a></li><li style="margin:.25rem 0;word-break:break-word"><a href="https://www.icmr.gov.in/" target="_blank" rel="noopener noreferrer" style="color:#0F766E">भारतीय आयुर्विज्ञान अनुसंधान परिषद (ICMR)</a></li></ol>
-    <p style="color:#8A96A3;font-size:.82rem;margin:0">ये बाहरी वेबसाइटें हैं; जानकारी उनके सामान्य दिशानिर्देशों पर आधारित है। अंतिम समीक्षा: अक्टूबर 2026</p>
+  <section id="jaanch">
+    <h2>एनीमिया की जाँच</h2>
+    <div class="tablewrap"><table><tr><th>जाँच</th><th>क्या बताती है</th></tr><tr><td><strong>Hemoglobin / CBC</strong></td><td>एनीमिया है या नहीं, और किस तरह का (MCV से)</td></tr><tr><td>Peripheral smear</td><td>खून की कोशिकाओं का आकार</td></tr><tr><td><strong>Serum Ferritin</strong>, Iron profile</td><td>आयरन का भंडार</td></tr><tr><td>Vitamin B12, Folate</td><td>इनकी कमी</td></tr><tr><td>मल की जाँच</td><td>कीड़े या छुपा खून</td></tr><tr><td><strong>HPLC / Hb electrophoresis</strong></td><td>थैलेसीमिया या सिकल सेल</td></tr></table></div><p class="note">एनीमिया मुक्त भारत कार्यक्रम में Hemoglobin जाँच और आयरन-फोलिक एसिड (IFA) गोलियाँ सरकारी केंद्रों, स्कूलों और आंगनवाड़ी पर मुफ्त हैं।</p>
+    
+  </section>
 
-    <p class="sd-seo-note" style="margin-top:1.2rem;color:#8A96A3;font-size:.85rem;border-top:1px dashed #E5DFD2;padding-top:.7rem">यह जानकारी केवल शैक्षिक है, चिकित्सीय सलाह या निदान नहीं। गंभीर लक्षण में तुरंत डॉक्टर से मिलें या <a href="tel:108" style="color:#0F766E;font-weight:600">108</a> पर कॉल करें।</p>
+  <section id="ilaj">
+    <h2>इलाज और आयरन की गोली लेने का सही तरीका</h2>
+    <ul class="list"><li>इलाज कारण पर निर्भर है। आयरन की कमी में <strong>आयरन की गोली</strong> दी जाती है।</li><li>आयरन की गोली नींबू पानी, आँवला या संतरे जैसे vitamin C वाले खाने के साथ लेने से बेहतर असर करती है।</li><li>गोली के 1 घंटे पहले और बाद तक <strong>चाय, कॉफ़ी, दूध और कैल्शियम</strong> न लें।</li><li>मल का रंग काला होना आयरन का सामान्य असर है। कब्ज़ या जी मिचलाए तो गोली खाने के बाद लें और डॉक्टर को बताएँ।</li><li>Hemoglobin 2–4 हफ्तों में बढ़ने लगता है और सामान्य होने में 2–3 महीने लगते हैं। Hemoglobin ठीक होने के बाद भी आयरन का भंडार भरने के लिए डॉक्टर के बताए समय तक गोली लेते रहें।</li><li>बहुत कम Hemoglobin या गोली न सह पाने पर डॉक्टर आयरन की drip दे सकते हैं। बहुत गंभीर मामलों में खून चढ़ाया जाता है।</li><li>B12 की कमी में B12 की गोली या injection, और कीड़ों के लिए कीड़े की दवा दी जाती है।</li></ul>
+    
+  </section>
 
-    <h3 style="font-family:'Tiro Devanagari Hindi',serif;color:#0F766E;margin-top:1.2rem">संबंधित</h3>
-    <p style="margin:.3rem 0"><a href="uti" style="color:#0F766E;text-decoration:none;background:#E0F0EE;border:1px solid #B8DAD5;border-radius:999px;padding:3px 12px;font-size:.9rem;display:inline-block;margin:0 6px 6px 0">पेशाब का संक्रमण</a></p>
-    <p style="margin:.4rem 0"><a href="bimari-guide" style="color:#0F766E;font-weight:600">← सभी बीमारियाँ (बीमारी गाइड)</a> · <a href="lakshan-janch" style="color:#0F766E;font-weight:600">लक्षण जांच</a></p>
-  </div>
+  <section id="khana">
+    <h2>आयरन वाला खाना</h2>
+    <ul class="list"><li><strong>हरी पत्तेदार सब्ज़ियाँ</strong>: पालक, बथुआ, सरसों, चौलाई, मेथी, सहजन (मुनगा) के पत्ते</li><li>दाल, चना, राजमा, सोयाबीन, मूंगफली, तिल, गुड़-चना</li><li>अगर खाते हों तो अंडा, मछली, मीट, कलेजी (इनका आयरन जल्दी पचता है)</li><li>साथ में vitamin C: नींबू, आँवला, अमरूद, संतरा, टमाटर</li><li>लोहे की कढ़ाई में खाना पकाने से खाने में आयरन बढ़ता है</li><li>खाने के तुरंत बाद चाय न पिएँ, 1 घंटे का अंतर रखें</li></ul><p class="note">आयरन की कमी हो चुकी हो तो सिर्फ खाने से Hemoglobin बढ़ने में बहुत समय लगता है। ऐसे में डॉक्टर की दी हुई गोली ज़रूरी है।</p>
+    
+  </section>
+
+  <section id="garbh">
+    <h2>गर्भावस्था और महिलाओं में एनीमिया</h2>
+    <ul class="list"><li>गर्भावस्था में खून की कमी से समय से पहले प्रसव, कम वज़न का बच्चा और प्रसव में ज़्यादा खतरा होता है।</li><li>गर्भावस्था में और प्रसव के बाद रोज़ IFA गोली लें, जितने दिन डॉक्टर या ANM बताएँ।</li><li>हर जाँच पर Hemoglobin नपवाएँ।</li><li>माहवारी में बहुत ज़्यादा खून जाता हो तो Gynecologist को दिखाएँ।</li><li>किशोरियों को स्कूल या आंगनवाड़ी में हर हफ्ते मिलने वाली IFA गोली (नीली) ज़रूर दिलाएँ।</li></ul>
+    
+  </section>
+
+  <section id="bachche">
+    <h2>बच्चों में एनीमिया</h2>
+    <ul class="list"><li>खून की कमी से बच्चों का दिमागी विकास, पढ़ाई और कद प्रभावित होता है।</li><li>सरकारी कार्यक्रम में छोटे बच्चों को IFA सिरप और बड़े बच्चों को IFA गोली (गुलाबी) मुफ्त मिलती है।</li><li><strong>हर 6 महीने कीड़े की दवा</strong> (राष्ट्रीय कृमि मुक्ति दिवस पर मुफ्त) ज़रूर दिलवाएँ।</li><li>6 महीने के बाद माँ के दूध के साथ दाल, सब्ज़ी, अंडा जैसा पूरक आहार दें।</li><li>बच्चों को चाय न पिलाएँ।</li></ul>
+    
+  </section>
+
+  <section id="bujurg">
+    <h2>बुज़ुर्गों में एनीमिया</h2>
+    <ul class="list"><li>बुज़ुर्गों में खून की कमी अक्सर पेट या आँत से छुपे खून बहने, किडनी की बीमारी या B12 की कमी से होती है।</li><li>सिर्फ आयरन की गोली लेते रहने से पहले <strong>कारण की जाँच</strong> ज़रूर कराएँ।</li><li>दर्द की दवाएँ और खून पतला करने वाली दवाएँ पेट से खून बहा सकती हैं, डॉक्टर को बताएँ।</li></ul>
+    
+  </section>
+
+  <section id="hospital">
+    <h2>कब डॉक्टर या hospital जाएँ?</h2>
+    <ul class="list"><li>ऊपर दिया कोई भी <a href="#khatre">खतरे का संकेत</a> दिखे</li><li>आयरन की गोली के 1 महीने बाद भी Hemoglobin न बढ़े</li><li>बार-बार खून की कमी हो</li><li>परिवार में थैलेसीमिया या सिकल सेल हो</li></ul>
+    
+  </section>
+
+  <section id="doctor">
+    <h2>कौन-सा doctor दिखाएँ?</h2>
+    <ul class="list"><li><strong>General Physician (MBBS)</strong> / PHC: जाँच और इलाज</li><li><strong>Gynecologist</strong>: गर्भावस्था या ज़्यादा माहवारी</li><li><strong>Pediatrician</strong>: बच्चों के लिए</li><li><strong>Hematologist</strong> (खून के विशेषज्ञ): थैलेसीमिया, सिकल सेल या कारण न मिले</li><li><strong>Gastroenterologist</strong>: पेट या आँत से खून बहने का शक</li></ul><p><a href="/">सहीDoctor पर अपने पास के doctor और hospital खोजें</a></p>
+    
+  </section>
+
+  <section id="kya-na">
+    <h2>क्या न करें?</h2>
+    <ul class="list dont"><li>ताकत लौटते ही आयरन की गोली बंद न करें।</li><li>आयरन की गोली चाय या दूध के साथ न लें।</li><li>अपने मन से आयरन या ताकत के injection न लगवाएँ।</li><li>काले मल (बिना आयरन लिए) या ज़्यादा माहवारी को नज़रअंदाज़ न करें।</li><li>थैलेसीमिया की जाँच के बिना लंबे समय तक आयरन न लें।</li><li>सिर्फ चुकंदर या अनार के भरोसे इलाज में देर न करें।</li></ul>
+    
+  </section>
+
+  <section id="bachav">
+    <h2>बचाव कैसे करें?</h2>
+    <ul class="list"><li>रोज़ के खाने में हरी सब्ज़ी, दाल और vitamin C वाला फल शामिल करें।</li><li>हर 6 महीने कीड़े की दवा लें, शौचालय का इस्तेमाल करें, चप्पल पहनें।</li><li>गर्भवती और किशोरियाँ सरकारी IFA गोली नियमित लें।</li><li>दो बच्चों के बीच कम से कम 3 साल का अंतर रखें।</li><li>शादी से पहले थैलेसीमिया की जाँच कराएँ, खासकर अगर परिवार में किसी को हो।</li></ul>
+    
+  </section>
+
+  <section id="faq">
+    <h2>अक्सर पूछे जाने वाले सवाल (FAQ)</h2>
+    <details><summary>क्या चुकंदर और अनार से खून जल्दी बढ़ता है?</summary><p>इनमें आयरन बहुत ज़्यादा नहीं होता। ये अच्छे खाने का हिस्सा हैं, पर आयरन की कमी में डॉक्टर की दी हुई गोली ज़रूरी है।</p></details><details><summary>आयरन की गोली से मल काला क्यों होता है?</summary><p>यह आयरन का सामान्य असर है और नुकसानदेह नहीं। पर बिना आयरन लिए काला मल हो तो डॉक्टर को दिखाएँ।</p></details><details><summary>Hemoglobin कितने दिन में बढ़ता है?</summary><p>सही इलाज से 2–4 हफ्तों में बढ़ना शुरू होता है और 2–3 महीने में सामान्य हो जाता है।</p></details><details><summary>थैलेसीमिया trait क्या है?</summary><p>इसमें व्यक्ति स्वस्थ रहता है और हल्की खून की कमी हो सकती है। अगर पति-पत्नी दोनों में trait हो तो बच्चे को गंभीर थैलेसीमिया हो सकता है, इसलिए शादी या गर्भावस्था से पहले जाँच कराएँ।</p></details><details><summary>क्या गुड़ खाने से खून बढ़ता है?</summary><p>गुड़ में थोड़ा आयरन होता है। गुड़-चना अच्छा नाश्ता है, पर यह दवा की जगह नहीं ले सकता।</p></details>
+  </section>
+
+  <section id="sources">
+    <h2>Medical sources</h2>
+    <ul class="list sources"><li><a href="https://www.who.int/news-room/fact-sheets/detail/anaemia" rel="noopener" target="_blank">WHO — Anaemia</a></li><li><a href="https://anemiamuktbharat.info/" rel="noopener" target="_blank">एनीमिया मुक्त भारत, स्वास्थ्य मंत्रालय</a></li><li><a href="https://www.nhs.uk/conditions/iron-deficiency-anaemia/" rel="noopener" target="_blank">NHS — Iron deficiency anaemia</a></li></ul>
+  </section>
 </main>
-<footer style="background:#16283F;color:#B9C7D6" class="py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="grid md:grid-cols-4 gap-6 mb-6" style="font-family:'Mukta',sans-serif">
-      <div><div style="font-family:'Tiro Devanagari Hindi',serif;color:#fff" class="text-lg font-bold mb-2">सहीDoctor</div>
-        <p style="color:#8FA3B5" class="text-sm">हिंदी-प्रथम, मुफ़्त स्वास्थ्य नेविगेशन।</p></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">सेवाएं</div><div class="grid gap-1">
-        <a href="lakshan-janch" style="color:#B9C7D6;text-decoration:none">लक्षण जांच</a>
-        <a href="bimari-guide" style="color:#B9C7D6;text-decoration:none">बीमारी गाइड</a>
-        <a href="doctor-khojen" style="color:#B9C7D6;text-decoration:none">डॉक्टर खोजें</a>
-        <a href="sarkari-aspatal" style="color:#B9C7D6;text-decoration:none">सरकारी अस्पताल</a></div></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">और जानकारी</div><div class="grid gap-1">
-        <a href="ambulance" style="color:#B9C7D6;text-decoration:none">एम्बुलेंस (108)</a>
-        <a href="dawa-dukan" style="color:#B9C7D6;text-decoration:none">दवा दुकान</a>
-        <a href="juden" style="color:#B9C7D6;text-decoration:none">जुड़ें</a></div></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">संस्था व नीति</div><div class="grid gap-1">
-        <a href="about" style="color:#B9C7D6;text-decoration:none">हमारे बारे में</a>
-        <a href="disclaimer" style="color:#B9C7D6;text-decoration:none">चिकित्सा अस्वीकरण</a>
-        <a href="privacy" style="color:#B9C7D6;text-decoration:none">गोपनीयता नीति</a>
-        <a href="contact" style="color:#B9C7D6;text-decoration:none">संपर्क करें</a></div></div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,.12);font-family:'Mukta',sans-serif;color:#7C90A2" class="pt-4 text-xs flex justify-between flex-wrap gap-2">
-      <span>© 2026 सहीDoctor · Quaitronix</span><span>शैक्षिक जानकारी — चिकित्सीय सलाह नहीं।</span></div>
+
+<footer>
+  <div class="in">
+    <p><strong>Disclaimer:</strong> यह जानकारी केवल जागरूकता के लिए है। यह डॉक्टर की सलाह, जाँच या इलाज का विकल्प नहीं है। गंभीर लक्षण होने पर तुरंत नज़दीकी अस्पताल जाएँ या <a href="tel:108">108</a> पर call करें।</p>
+    <p>© 2026 <a href="/">सहीDoctor</a> — मुफ्त हिंदी स्वास्थ्य जानकारी</p>
   </div>
 </footer>
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("/sw.js").catch(function () {});
-    });
-  }
-</script>
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: "hi",
-    includedLanguages: "en,hi,pa,bn,ta,te,mr,gu,kn,ml,ur,or,as,mai,ne,sd,kok",
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, "google_translate_element");
-}
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

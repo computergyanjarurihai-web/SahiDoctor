@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+<!-- सहीDoctor disease page. Template वही है जो dengue.html का है। -->
 <meta charset="UTF-8">
-<script>
-/* Make React tolerant of Google Translate's DOM changes (prevents crashes) */
-(function () {
-  if (typeof Node === "function" && Node.prototype) {
-    var rc = Node.prototype.removeChild;
-    Node.prototype.removeChild = function (c) { if (c.parentNode !== this) { return c; } return rc.apply(this, arguments); };
-    var ib = Node.prototype.insertBefore;
-    Node.prototype.insertBefore = function (n, r) { if (r && r.parentNode !== this) { return n; } return ib.apply(this, arguments); };
-  }
-})();
-</script>
-<style>
-  #lang-bar { background:#0F766E; color:#fff; padding:5px 12px; font-size:13px; display:flex; align-items:center; gap:8px; justify-content:center; font-family:system-ui,sans-serif; flex-wrap:wrap; }
-  #lang-bar .goog-te-combo { font-size:14px; padding:3px 8px; border-radius:6px; border:none; margin:0; max-width:200px; }
-  .goog-te-gadget { font-size:0 !important; }
-  .goog-te-gadget span, .goog-logo-link { display:none !important; }
-  .goog-te-banner-frame, .skiptranslate iframe { display:none !important; }
-  body { top:0 !important; position:static !important; }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>पथरी (किडनी स्टोन) (Kidney Stone) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor</title>
-<meta name="description" content="पथरी (किडनी स्टोन) (Kidney Stone) के आम लक्षण: कमर/पेट के एक तरफ़ अचानक तेज़ दर्द (लहरों में), दर्द जाँघ तक जाना, पेशाब में जलन। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।">
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#1D3557">
-<link rel="apple-touch-icon" href="/icons/icon-180.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="सहीDoctor">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>किडनी की पथरी (Kidney Stone): दर्द, जाँच, किस size की पथरी अपने-आप निकलती है, इलाज और बचाव | सहीDoctor</title>
+<meta name="description" content="किडनी की पथरी क्यों बनती है, कमर से पेट तक जाने वाला दर्द, खतरे के संकेत, Ultrasound और CT जाँच, किस size की पथरी अपने-आप निकलती है, ESWL, URS, PCNL इलाज, पानी और खान-पान — आसान हिंदी में।">
 <link rel="canonical" href="https://sahidoctor.in/kidney-stone">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="author" content="SahiDoctor · Quaitronix">
-<meta name="geo.region" content="IN"><meta name="geo.placename" content="India">
-<meta property="og:type" content="article"><meta property="og:site_name" content="सहीDoctor">
-<meta property="og:title" content="पथरी (किडनी स्टोन) (Kidney Stone) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor"><meta property="og:description" content="पथरी (किडनी स्टोन) (Kidney Stone) के आम लक्षण: कमर/पेट के एक तरफ़ अचानक तेज़ दर्द (लहरों में), दर्द जाँघ तक जाना, पेशाब में जलन। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।">
-<meta property="og:url" content="https://sahidoctor.in/kidney-stone"><meta property="og:image" content="https://sahidoctor.in/og-image.png">
-<meta property="og:locale" content="hi_IN">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="पथरी (किडनी स्टोन) (Kidney Stone) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor"><meta name="twitter:description" content="पथरी (किडनी स्टोन) (Kidney Stone) के आम लक्षण: कमर/पेट के एक तरफ़ अचानक तेज़ दर्द (लहरों में), दर्द जाँघ तक जाना, पेशाब में जलन। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।"><meta name="twitter:image" content="https://sahidoctor.in/og-image.png">
+<meta property="og:title" content="किडनी की पथरी (Kidney Stone) — आसान हिंदी में">
+<meta property="og:description" content="किडनी की पथरी क्यों बनती है, कमर से पेट तक जाने वाला दर्द, खतरे के संकेत, Ultrasound और CT जाँच, किस size की पथरी अपने-आप निकलती है, ESWL, URS, PCNL इलाज, पानी और खान-पान — आसान हिंदी में।">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sahidoctor.in/kidney-stone">
+<meta name="theme-color" content="#0f5c4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"पथरी (किडनी स्टोन) (Kidney Stone)","inLanguage":"hi","url":"https://sahidoctor.in/kidney-stone","description":"पथरी (किडनी स्टोन) (Kidney Stone) के आम लक्षण: कमर/पेट के एक तरफ़ अचानक तेज़ दर्द (लहरों में), दर्द जाँघ तक जाना, पेशाब में जलन। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।","publisher":{"@type":"Organization","name":"सहीDoctor"},"about":{"@type":"MedicalCondition","name":"पथरी (किडनी स्टोन)","alternateName":"Kidney Stone"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"सहीDoctor","item":"https://sahidoctor.in/"},
-{"@type":"ListItem","position":2,"name":"बीमारी गाइड","item":"https://sahidoctor.in/bimari-guide"},
-{"@type":"ListItem","position":3,"name":"पथरी (किडनी स्टोन)","item":"https://sahidoctor.in/kidney-stone"}]}
+{
+ "@context": "https://schema.org",
+ "@type": "MedicalWebPage",
+ "name": "किडनी की पथरी (Kidney Stone) — आसान हिंदी में",
+ "url": "https://sahidoctor.in/kidney-stone",
+ "inLanguage": "hi",
+ "dateModified": "2026-10-05",
+ "about": {
+  "@type": "MedicalCondition",
+  "name": "Kidney stones",
+  "alternateName": "पथरी",
+  "signOrSymptom": [
+   {
+    "@type": "MedicalSymptom",
+    "name": "कमर या बगल में तेज़ दर्द"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "पेशाब में खून"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "उल्टी"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "पेशाब में जलन"
+   }
+  ]
+ },
+ "audience": {
+  "@type": "PeopleAudience",
+  "geographicArea": "India"
+ }
+}
 </script>
 <script type="application/ld+json">
 {
@@ -56,179 +59,261 @@
  "mainEntity": [
   {
    "@type": "Question",
-   "name": "पथरी (किडनी स्टोन) के मुख्य लक्षण क्या हैं?",
+   "name": "क्या पथरी दवा से घुल जाती है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "पथरी (किडनी स्टोन) के आम लक्षण हैं: कमर/पेट के एक तरफ़ अचानक तेज़ दर्द (लहरों में), दर्द जाँघ तक जाना, पेशाब में जलन, पेशाब में खून, जी मिचलाना। लक्षण हर व्यक्ति में अलग हो सकते हैं, इसलिए पुष्टि जाँच व डॉक्टर से ही होती है।"
+    "text": "Uric acid वाली पथरी कई बार दवा से घुल जाती है। Calcium वाली पथरी, जो सबसे आम है, आमतौर पर नहीं घुलती।"
    }
   },
   {
    "@type": "Question",
-   "name": "पथरी (किडनी स्टोन) में कब तुरंत डॉक्टर के पास जाना चाहिए?",
+   "name": "क्या पथरी दोबारा बनती है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "इन खतरे के निशानों पर देर न करें: दर्द के साथ बुखार, पेशाब बिल्कुल बंद होना। गंभीर स्थिति में तुरंत नज़दीकी अस्पताल जाएँ या 108 पर कॉल करें।"
+    "text": "हाँ, बहुत से लोगों में कुछ सालों में दोबारा बन जाती है। पानी और खान-पान से इसका खतरा काफ़ी घटता है।"
    }
   },
   {
    "@type": "Question",
-   "name": "पथरी (किडनी स्टोन) के लिए कौन-सा डॉक्टर दिखाएँ?",
+   "name": "क्या टमाटर के बीज से पथरी बनती है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "आम तौर पर मूत्र रोग विशेषज्ञ (Urologist) को दिखाया जाता है। सहीDoctor के 'डॉक्टर खोजें' पेज पर अपने इलाक़े के नज़दीकी मूत्र रोग विशेषज्ञ (Urologist) ढूँढ सकते हैं।"
+    "text": "यह एक आम गलतफ़हमी है। सामान्य मात्रा में टमाटर खाने से पथरी नहीं बनती।"
    }
   },
   {
    "@type": "Question",
-   "name": "पथरी (किडनी स्टोन) के बारे में ज़रूरी बात क्या है?",
+   "name": "क्या हर पथरी का ऑपरेशन ज़रूरी है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "खूब पानी पिएँ (2.5–3 लीटर/दिन)। छोटी पथरी अक्सर खुद निकल जाती है।"
+    "text": "नहीं। छोटी पथरी अक्सर अपने-आप निकल जाती है। बड़ी पथरी के लिए भी ज़्यादातर बिना चीरे वाले तरीके हैं।"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "पथरी निकलने में कितना समय लगता है?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "छोटी पथरी अक्सर कुछ दिनों से 4 हफ्तों में निकल जाती है। उससे ज़्यादा समय लगे तो डॉक्टर को दिखाएँ।"
    }
   }
  ]
 }
 </script>
-<link rel="stylesheet" href="tailwind.css">
 <style>
-  html,body{min-height:100%;}
-  body{
-    margin:0;
-    background-color:#E8F5EA;
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M20 13h4v7h7v4h-7v7h-4v-7h-7v-4h7z' fill='%230F766E' fill-opacity='0.045'/%3E%3C/svg%3E"),
-      linear-gradient(165deg,#EEF8F0 0%,#DEF1E2 50%,#CDE9D5 100%);
-    background-repeat: repeat, no-repeat;
-    background-size: 44px 44px, 100% 100%;
-    background-attachment: scroll, scroll;
+  :root{
+    --green:#0f5c4d;
+    --green-soft:#e3f0ec;
+    --ink:#1c2b2a;
+    --muted:#526462;
+    --paper:#ffffff;
+    --bg:#f2f6f5;
+    --line:#d5e2df;
+    --red:#b42318;
+    --red-soft:#fdecea;
+    --amber:#93500a;
+    --amber-soft:#fdf3e1;
   }
-</style>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap');
-  .prose-hi h2{font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.3rem;font-weight:800;margin:1.3rem 0 .5rem}
-  .prose-hi h3{font-family:'Tiro Devanagari Hindi',serif;color:#0F766E;font-size:1.1rem;font-weight:700}
-  .prose-hi p,.prose-hi li{font-family:'Mukta',sans-serif;color:#1D3557;font-size:1rem;line-height:1.75}
-  .prose-hi ul{margin:.4rem 0 .8rem;padding-left:1.2rem;list-style:disc} .prose-hi li{margin:.25rem 0}
-  .prose-hi a{color:#0F766E} .prose-hi b{color:#1D3557}
-  .sd-faq-item{border:1px solid #E5DFD2;border-radius:10px;margin-bottom:.5rem;background:#fff}
-  .sd-faq-item summary{font-family:'Mukta',sans-serif;font-weight:600;color:#1D3557;cursor:pointer;padding:.65rem .9rem;list-style:none;font-size:.98rem}
-  .sd-faq-item summary::-webkit-details-marker{display:none}
-  .sd-faq-item summary::before{content:"＋";color:#0F766E;font-weight:700;margin-right:.5rem}
-  .sd-faq-item[open] summary::before{content:"－"}
-  .sd-faq-a{font-family:'Mukta',sans-serif;color:#45606f;font-size:.95rem;line-height:1.7;padding:0 .9rem .8rem 2rem}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Mukta","Nirmala UI","Mangal",system-ui,sans-serif;
+    font-size:18px;line-height:1.7;
+  }
+  a{color:var(--green)}
+  a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+  h1,h2{font-family:"Tiro Devanagari Hindi","Nirmala UI","Mangal",serif;font-weight:400;line-height:1.3}
+
+  /* Header */
+  .top{background:var(--green);color:#fff}
+  .top-in{max-width:760px;margin:0 auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center}
+  .logo{color:#fff;text-decoration:none;font-weight:700;font-size:22px}
+  .logo span{font-weight:400;opacity:.85}
+  .top a.call{color:#fff;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,.6);padding:4px 12px;border-radius:6px;font-size:16px}
+
+  /* Section nav */
+  .toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+  .toc ul{max-width:760px;margin:0 auto;padding:10px 18px;list-style:none;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .toc ul::-webkit-scrollbar{display:none}
+  .toc a{display:block;white-space:nowrap;text-decoration:none;font-size:15px;padding:4px 12px;border-radius:999px;background:var(--green-soft);color:var(--green)}
+  .toc a.warn{background:var(--red-soft);color:var(--red);font-weight:600}
+
+  main{max-width:760px;margin:0 auto;padding:8px 18px 40px}
+  .crumb{font-size:15px;color:var(--muted);margin:16px 0 0}
+  .crumb a{color:var(--muted)}
+  h1{font-size:2.2rem;margin:6px 0 8px}
+  .lead{font-size:1.15rem;color:var(--muted);margin:0 0 18px}
+  .meta{font-size:15px;color:var(--muted);border-left:3px solid var(--green);padding-left:12px;margin-bottom:24px}
+
+  /* Quick facts */
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 28px}
+  .facts div{background:var(--paper);padding:12px 14px}
+  .facts dt{font-size:14px;color:var(--muted)}
+  .facts dd{margin:0;font-weight:600;line-height:1.4}
+
+  section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:6px 22px 18px;margin-bottom:18px}
+  h2{font-size:1.55rem;margin:18px 0 8px;color:var(--green)}
+  h3{font-size:1.1rem;margin:18px 0 4px}
+  ul.list{padding-left:22px;margin:8px 0}
+  ul.list li{margin-bottom:6px}
+  .note{background:var(--amber-soft);border-left:4px solid var(--amber);padding:10px 14px;border-radius:0 8px 8px 0;margin:14px 0;font-size:17px}
+
+  /* Emergency card — the one loud element on the page */
+  section.danger{background:var(--red-soft);border:2px solid var(--red)}
+  section.danger h2{color:var(--red)}
+  .danger ul.list li::marker{color:var(--red)}
+  .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:8px;margin:8px 8px 0 0;font-size:17px}
+  .btn.alt{background:#fff;color:var(--red);border:2px solid var(--red)}
+
+  table{width:100%;border-collapse:collapse;font-size:16px;margin:10px 0}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--green-soft);color:var(--green);font-weight:600}
+  .tablewrap{overflow-x:auto}
+
+  .dont li::marker{content:"✕  ";color:var(--red);font-weight:700}
+
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:0}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+  details[open] summary::after{content:"−"}
+  details p{margin:8px 0 0;color:var(--ink)}
+
+  .sources li{font-size:16px}
+
+  footer{background:var(--ink);color:#c9d6d4;font-size:15px}
+  footer .in{max-width:760px;margin:0 auto;padding:22px 18px}
+  footer a{color:#fff}
+
+  @media (max-width:520px){
+    body{font-size:17px}
+    h1{font-size:1.85rem}
+    section{padding:4px 16px 16px}
+    .facts{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
-<div id="lang-bar"><span>🌐 अपनी भाषा चुनें / Choose your language:</span><div id="google_translate_element"></div></div>
-<header style="background:#1D3557" class="px-4 py-4">
-  <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-2">
-    <div>
-      <a href="/" style="font-family:'Tiro Devanagari Hindi',serif;color:#fff;text-decoration:none" class="text-2xl font-extrabold leading-tight block">सही<span style="color:#E8930C">Doctor</span></a>
-      <div style="font-family:'Mukta',sans-serif;color:#B9C7D6" class="text-xs">लक्षण पहचानें · सही डॉक्टर चुनें · फ़ीस तुलना करें</div>
-    </div>
-    <nav class="flex gap-1 flex-wrap">
-            <a href="lakshan-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">लक्षण जाँच</a>
-            <a href="bimari-guide" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">बीमारी गाइड</a>
-            <a href="doctor-khojen" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">डॉक्टर खोजें</a>
-            <a href="lab-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जाँच-लैब</a>
-            <a href="sarkari-aspatal" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">सरकारी अस्पताल</a>
-            <a href="ambulance" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">🚑 एम्बुलेंस</a>
-            <a href="dawa-dukan" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">💊 दवा दुकान</a>
-            <a href="juden" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">➕ जुड़ें</a>
-            <a href="jankari" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जानकारी</a>
-    </nav>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/">सही<span>Doctor</span></a>
+    <a class="call" href="tel:108">Ambulance 108</a>
   </div>
 </header>
-<main class="max-w-3xl mx-auto px-4 py-8">
-  <nav style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-3"><a href="/" style="color:#0F766E;text-decoration:none">मुख्य पृष्ठ</a> › <a href="bimari-guide" style="color:#0F766E;text-decoration:none">बीमारी गाइड</a> › पथरी (किडनी स्टोन)</nav>
-  <div class="prose-hi rounded-xl p-6" style="background:#FBF8F1;border:1px solid #E5DFD2;box-shadow:0 4px 16px rgba(29,53,87,.06)">
-    <h1 style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.7rem;font-weight:800;margin:0 0 .6rem">पथरी (किडनी स्टोन) <span style="color:#0F766E;font-size:1.1rem">(Kidney Stone)</span></h1>
 
-    <span style="font-family:'Mukta',sans-serif;background:#FDF1DC;color:#B5730B;border:1px solid #F0D9A8;border-radius:999px;padding:2px 12px;font-size:.8rem;display:inline-block;margin-bottom:.6rem">श्रेणी: पेट / Digestive</span>
-    <p>पथरी (किडनी स्टोन) (Kidney Stone) से जुड़ी आम जानकारी — इसके लक्षण, खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए, सरल हिंदी में। यह जानकारी केवल शैक्षिक है; किसी भी बीमारी की पुष्टि व इलाज योग्य डॉक्टर से ही कराएँ।</p>
+<nav class="toc" aria-label="इस page के हिस्से">
+  <ul><li><a href="#kya-hai">क्या है</a></li><li><a href="#karan">कारण</a></li><li><a href="#lakshan">लक्षण</a></li><li><a class="warn" href="#khatre">खतरे के संकेत</a></li><li><a href="#jaanch">जाँच</a></li><li><a href="#ilaj">इलाज</a></li><li><a href="#khana">पानी और खान-पान</a></li><li><a href="#bachche">बच्चे</a></li><li><a href="#bujurg">बुज़ुर्ग</a></li><li><a href="#hospital">कब hospital</a></li><li><a href="#doctor">कौन-सा doctor</a></li><li><a href="#kya-na">क्या न करें</a></li><li><a href="#bachav">बचाव</a></li><li><a href="#faq">FAQ</a></li></ul>
+</nav>
 
-    <h2>पथरी (किडनी स्टोन) के लक्षण</h2>
-    <ul>
-      <li>कमर/पेट के एक तरफ़ अचानक तेज़ दर्द (लहरों में)</li>
-      <li>दर्द जाँघ तक जाना</li>
-      <li>पेशाब में जलन</li>
-      <li>पेशाब में खून</li>
-      <li>जी मिचलाना</li>
-    </ul>
+<main>
+  <p class="crumb"><a href="/">होम</a> › <a href="/bimariyan">बीमारियाँ</a> › पथरी</p>
+  <h1>किडनी की पथरी (Kidney Stone)</h1>
+  <p class="lead">किडनी में बनने वाले नमक के कड़े टुकड़े। छोटी पथरी अक्सर पानी के साथ अपने-आप निकल जाती है, बड़ी पथरी के लिए आज बिना चीरे वाले आसान तरीके उपलब्ध हैं।</p>
+  <p class="meta">
+    Last updated: 5 अक्टूबर 2026<br>
+    यह जानकारी NHS, NIDDK और मूत्र रोग (Urology) के चिकित्सा दिशानिर्देशों पर आधारित है।
+  </p>
+  <dl class="facts"><div><dt>मुख्य कारण</dt><dd>कम पानी पीना</dd></div><div><dt>पहली जाँच</dt><dd>Ultrasound (KUB)</dd></div><div><dt>5 mm से छोटी</dt><dd>अक्सर अपने-आप निकल जाती है</dd></div><div><dt>दोबारा बनना</dt><dd>आम, इसलिए बचाव ज़रूरी</dd></div></dl>
 
-    <h2>खतरे के निशान — कब तुरंत डॉक्टर के पास जाएँ</h2>
-    <div style="background:#FBEAE7;border:1px solid #E6b3ab;border-left:5px solid #C0392B;border-radius:10px;padding:.4rem 1rem .6rem">
-    <ul style="margin:.4rem 0">
-      <li>दर्द के साथ बुखार</li>
-      <li>पेशाब बिल्कुल बंद होना</li>
-    </ul>
-    </div>
+  <section id="kya-hai">
+    <h2>किडनी की पथरी क्या है?</h2>
+    <p>पेशाब में घुले कुछ नमक (जैसे calcium oxalate, uric acid) जब ज़्यादा हो जाते हैं, तो वे जमकर कड़े टुकड़े बना लेते हैं। यही पथरी है। ज़्यादातर पथरी <strong>calcium</strong> वाली होती है।</p><p>पथरी किडनी में चुपचाप पड़ी रह सकती है। जब यह किडनी से पेशाब की नली (ureter) में खिसकती है और रास्ता रोकती है, तब तेज़ दर्द होता है।</p>
+    
+  </section>
 
-    <h2>कौन-सा डॉक्टर दिखाएँ</h2>
-    <p>पथरी (किडनी स्टोन) के लिए आम तौर पर <b>मूत्र रोग विशेषज्ञ (Urologist)</b> को दिखाया जाता है।</p>
-    <p><a href="doctor-khojen?spec=Urologist" style="display:inline-block;background:#0F766E;color:#fff;font-family:'Tiro Devanagari Hindi',serif;font-weight:700;padding:.6rem 1.3rem;border-radius:10px;text-decoration:none">🔍 नज़दीकी Urologist डॉक्टर खोजें →</a></p>
+  <section id="karan">
+    <h2>कारण और किसे खतरा</h2>
+    <ul class="list"><li><strong>कम पानी पीना</strong>, खासकर गर्मी और पसीने वाले काम में</li><li>खाने में ज़्यादा नमक</li><li>ज़्यादा मीट, cold drink (cola)</li><li>परिवार में पथरी</li><li>मोटापा</li><li>बार-बार पेशाब का संक्रमण</li><li>Gout (uric acid) और कुछ दूसरी बीमारियाँ</li><li>कुछ दवाएँ और supplements</li></ul>
+    
+  </section>
 
-    <h2>ज़रूरी बात</h2>
-    <p style="background:#E0F0EE;border-left:4px solid #0F766E;padding:.6rem .9rem;border-radius:8px">खूब पानी पिएँ (2.5–3 लीटर/दिन)। छोटी पथरी अक्सर खुद निकल जाती है।</p>
+  <section id="lakshan">
+    <h2>लक्षण</h2>
+    <ul class="list"><li><strong>कमर या बगल में पसलियों के नीचे तेज़ दर्द</strong>, जो पेट के निचले हिस्से और जाँघ के जोड़ तक जाता है</li><li>दर्द लहरों में आता-जाता है, मरीज़ किसी भी तरह आराम से नहीं बैठ पाता</li><li>जी मिचलाना, उल्टी</li><li>पेशाब में खून (गुलाबी, लाल या भूरा पेशाब)</li><li>बार-बार पेशाब आना, जलन, थोड़ा-थोड़ा पेशाब</li></ul><p class="note">कई छोटी पथरी कोई दर्द नहीं देतीं और किसी दूसरी जाँच में ultrasound पर संयोग से दिखती हैं।</p>
+    
+  </section>
 
-    <h2>अक्सर पूछे जाने वाले सवाल</h2>
-      <details class="sd-faq-item"><summary>पथरी (किडनी स्टोन) के मुख्य लक्षण क्या हैं?</summary><div class="sd-faq-a">पथरी (किडनी स्टोन) के आम लक्षण हैं: कमर/पेट के एक तरफ़ अचानक तेज़ दर्द (लहरों में), दर्द जाँघ तक जाना, पेशाब में जलन, पेशाब में खून, जी मिचलाना। लक्षण हर व्यक्ति में अलग हो सकते हैं, इसलिए पुष्टि जाँच व डॉक्टर से ही होती है।</div></details>
-      <details class="sd-faq-item"><summary>पथरी (किडनी स्टोन) में कब तुरंत डॉक्टर के पास जाना चाहिए?</summary><div class="sd-faq-a">इन खतरे के निशानों पर देर न करें: दर्द के साथ बुखार, पेशाब बिल्कुल बंद होना। गंभीर स्थिति में तुरंत नज़दीकी अस्पताल जाएँ या 108 पर कॉल करें।</div></details>
-      <details class="sd-faq-item"><summary>पथरी (किडनी स्टोन) के लिए कौन-सा डॉक्टर दिखाएँ?</summary><div class="sd-faq-a">आम तौर पर मूत्र रोग विशेषज्ञ (Urologist) को दिखाया जाता है। सहीDoctor के &#x27;डॉक्टर खोजें&#x27; पेज पर अपने इलाक़े के नज़दीकी मूत्र रोग विशेषज्ञ (Urologist) ढूँढ सकते हैं।</div></details>
-      <details class="sd-faq-item"><summary>पथरी (किडनी स्टोन) के बारे में ज़रूरी बात क्या है?</summary><div class="sd-faq-a">खूब पानी पिएँ (2.5–3 लीटर/दिन)। छोटी पथरी अक्सर खुद निकल जाती है।</div></details>
+  <section id="khatre" class="danger">
+    <h2>खतरे के संकेत (Warning signs)</h2>
+    <p>इनमें से कोई भी संकेत दिखे तो <strong>तुरंत hospital</strong> जाएँ:</p><ul class="list"><li><strong>पथरी के दर्द के साथ बुखार और कंपकंपी</strong> (रुकी हुई किडनी में संक्रमण, यह emergency है)</li><li>पेशाब बिल्कुल न आना</li><li>दवा से भी न रुकने वाला असहनीय दर्द</li><li>बार-बार उल्टी, कुछ भी पी न पाना</li><li>सिर्फ एक किडनी हो और पथरी का दर्द हो</li><li>गर्भावस्था में पथरी का दर्द</li><li>पेशाब में खून के थक्के</li></ul>
+    <a class="btn" href="tel:108">108 पर Call करें</a><a class="btn alt" href="tel:112">112 Emergency</a>
+  </section>
 
-    <h2>संदर्भ</h2>
-    <ol style="margin:.3rem 0 .4rem;padding-left:1.4rem;font-size:.95rem"><li style="margin:.25rem 0;word-break:break-word"><a href="https://medlineplus.gov/kidneystones.html" target="_blank" rel="noopener noreferrer" style="color:#0F766E">MedlinePlus — Kidney Stones</a></li><li style="margin:.25rem 0;word-break:break-word"><a href="https://mohfw.gov.in/" target="_blank" rel="noopener noreferrer" style="color:#0F766E">स्वास्थ्य एवं परिवार कल्याण मंत्रालय, भारत सरकार (MoHFW)</a></li></ol>
-    <p style="color:#8A96A3;font-size:.82rem;margin:0">ये बाहरी वेबसाइटें हैं; जानकारी उनके सामान्य दिशानिर्देशों पर आधारित है। अंतिम समीक्षा: अक्टूबर 2026</p>
+  <section id="jaanch">
+    <h2>पथरी की जाँच</h2>
+    <div class="tablewrap"><table><tr><th>जाँच</th><th>क्या बताती है</th></tr><tr><td><strong>Ultrasound (KUB)</strong></td><td>पथरी, उसका size और किडनी में सूजन (hydronephrosis)। पहली और सुरक्षित जाँच</td></tr><tr><td><strong>CT KUB</strong> (बिना dye)</td><td>सबसे सटीक: पथरी का सही size, जगह और कठोरता</td></tr><tr><td>X-ray KUB</td><td>पथरी पर नज़र रखने के लिए</td></tr><tr><td>पेशाब की जाँच और culture</td><td>खून और संक्रमण</td></tr><tr><td>Creatinine (KFT), calcium, uric acid</td><td>किडनी कितनी ठीक काम कर रही है और पथरी का कारण</td></tr><tr><td>निकली हुई पथरी की जाँच</td><td>पथरी किस चीज़ की है, ताकि बचाव का सही तरीका चुना जा सके</td></tr></table></div>
+    
+  </section>
 
-    <p class="sd-seo-note" style="margin-top:1.2rem;color:#8A96A3;font-size:.85rem;border-top:1px dashed #E5DFD2;padding-top:.7rem">यह जानकारी केवल शैक्षिक है, चिकित्सीय सलाह या निदान नहीं। गंभीर लक्षण में तुरंत डॉक्टर से मिलें या <a href="tel:108" style="color:#0F766E;font-weight:600">108</a> पर कॉल करें।</p>
+  <section id="ilaj">
+    <h2>इलाज: Size के हिसाब से</h2>
+    <div class="tablewrap"><table><tr><th>पथरी का size</th><th>आमतौर पर क्या होता है</th></tr><tr><td>5 mm से छोटी</td><td>ज़्यादातर पानी और दवा से अपने-आप निकल जाती है</td></tr><tr><td>5–10 mm</td><td>कुछ निकल जाती हैं, कुछ के लिए procedure चाहिए। डॉक्टर नली खोलने की दवा दे सकते हैं</td></tr><tr><td>10 mm से बड़ी</td><td>अक्सर procedure की ज़रूरत</td></tr></table></div><h3>Procedure के तरीके</h3><ul class="list"><li><strong>ESWL</strong>: बाहर से shock wave देकर पथरी तोड़ना, बिना चीरे के</li><li><strong>URS</strong>: पेशाब के रास्ते दूरबीन डालकर laser से पथरी तोड़ना</li><li><strong>PCNL</strong>: कमर में छोटा छेद करके बड़ी पथरी निकालना</li><li>खुला ऑपरेशन अब बहुत कम होता है</li></ul><ul class="list"><li>दर्द की दवा डॉक्टर की सलाह से लें। किडनी कमज़ोर हो तो कुछ दर्द की दवाएँ नुकसान करती हैं।</li><li>पथरी निकलने का इंतज़ार करते समय पेशाब छलनी या कपड़े से छानें ताकि पथरी जाँच के लिए मिल जाए।</li><li>Uric acid वाली पथरी कई बार दवा से घुल सकती है। Calcium वाली आमतौर पर नहीं घुलती।</li></ul>
+    
+  </section>
 
-    <h3 style="font-family:'Tiro Devanagari Hindi',serif;color:#0F766E;margin-top:1.2rem">संबंधित</h3>
-    <p style="margin:.3rem 0"><a href="jaundice-hepatitis" style="color:#0F766E;text-decoration:none;background:#E0F0EE;border:1px solid #B8DAD5;border-radius:999px;padding:3px 12px;font-size:.9rem;display:inline-block;margin:0 6px 6px 0">पीलिया / हेपेटाइटिस</a><a href="gastroenteritis" style="color:#0F766E;text-decoration:none;background:#E0F0EE;border:1px solid #B8DAD5;border-radius:999px;padding:3px 12px;font-size:.9rem;display:inline-block;margin:0 6px 6px 0">उल्टी-दस्त (आँतों का संक्रमण)</a></p>
-    <p style="margin:.4rem 0"><a href="bimari-guide" style="color:#0F766E;font-weight:600">← सभी बीमारियाँ (बीमारी गाइड)</a> · <a href="lakshan-janch" style="color:#0F766E;font-weight:600">लक्षण जांच</a></p>
-  </div>
+  <section id="khana">
+    <h2>पानी और खान-पान</h2>
+    <ul class="list"><li>दिन भर में इतना पानी पिएँ कि <strong>पेशाब हल्का पीला या साफ़</strong> रहे। ज़्यादातर लोगों के लिए 2.5–3 लीटर, गर्मी और मेहनत वाले काम में ज़्यादा।</li><li><strong>नींबू पानी</strong> (बिना ज़्यादा नमक-चीनी) पथरी बनने से रोकने में मदद करता है।</li><li>नमक कम करें: अचार, पापड़, नमकीन, पैकेट वाला खाना।</li><li>दूध, दही सामान्य मात्रा में लें। <strong>कैल्शियम बंद करने से उल्टा पथरी का खतरा बढ़ता है।</strong></li><li>पालक, चुकंदर, मूंगफली, चॉकलेट जैसी oxalate वाली चीज़ें बहुत ज़्यादा मात्रा में न लें, पूरी तरह बंद करने की ज़रूरत नहीं।</li><li>मीट और cola जैसी cold drink कम करें।</li></ul>
+    
+  </section>
+
+  <section id="bachche">
+    <h2>बच्चों में पथरी</h2>
+    <ul class="list"><li>बच्चों में पथरी कम होती है, पर हो तो कारण जानने के लिए पूरी जाँच ज़रूरी है।</li><li>बच्चों में पेट दर्द, उल्टी, पेशाब में खून या बार-बार पेशाब का संक्रमण इसके संकेत हो सकते हैं।</li><li>बच्चों को भी दिन भर भरपूर पानी पिलाएँ, cold drink और पैकेट वाला नमकीन कम दें।</li></ul>
+    
+  </section>
+
+  <section id="bujurg">
+    <h2>बुज़ुर्गों में पथरी</h2>
+    <ul class="list"><li>बुज़ुर्ग कम पानी पीते हैं, जिससे पथरी का खतरा बढ़ता है।</li><li>पुरुषों में prostate बढ़ने से पेशाब रुकने की समस्या पथरी के साथ हो सकती है।</li><li>किडनी कमज़ोर हो या कई दवाएँ चलती हों तो दर्द की दवा अपने मन से न लें।</li></ul>
+    
+  </section>
+
+  <section id="hospital">
+    <h2>कब hospital जाएँ?</h2>
+    <ul class="list"><li>ऊपर दिया कोई भी <a href="#khatre">खतरे का संकेत</a> दिखे</li><li>दर्द 2–3 दिन बाद भी बार-बार आए</li><li>Ultrasound में किडनी में सूजन (hydronephrosis) हो, भले दर्द न हो</li><li>पथरी बार-बार बनती हो</li></ul>
+    
+  </section>
+
+  <section id="doctor">
+    <h2>कौन-सा doctor दिखाएँ?</h2>
+    <ul class="list"><li><strong>Urologist</strong> (मूत्र रोग विशेषज्ञ): पथरी का मुख्य डॉक्टर</li><li><strong>General Surgeon</strong>: जहाँ Urologist न हो</li><li><strong>Nephrologist</strong>: बार-बार पथरी या किडनी कमज़ोर हो</li><li>तेज़ दर्द, बुखार या पेशाब बंद हो तो सीधे <strong>Emergency</strong></li></ul><p><a href="/">सहीDoctor पर अपने पास के doctor और hospital खोजें</a></p>
+    
+  </section>
+
+  <section id="kya-na">
+    <h2>क्या न करें?</h2>
+    <ul class="list dont"><li>पथरी निकालने के लिए beer न पिएँ। इससे शरीर में पानी की कमी होती है और कोई फ़ायदा साबित नहीं।</li><li>"पथरी गलाने" वाले पाउडर या नुस्खों के भरोसे महीनों इंतज़ार न करें। रुकी हुई पथरी चुपचाप किडनी खराब कर सकती है।</li><li>बिना दर्द वाली पथरी का follow-up ultrasound न छोड़ें।</li><li>दर्द की दवा बार-बार अपने मन से न लें।</li><li>दूध-दही पूरी तरह बंद न करें।</li><li>पथरी के साथ बुखार को नज़रअंदाज़ न करें।</li></ul>
+    
+  </section>
+
+  <section id="bachav">
+    <h2>पथरी दोबारा न बने, इसके लिए</h2>
+    <ul class="list"><li>भरपूर पानी पिएँ, पेशाब का रंग देखकर अंदाज़ा लगाएँ।</li><li>नींबू पानी रोज़ के खाने में शामिल करें।</li><li>नमक, मीट और cold drink कम करें।</li><li>वज़न सही रखें।</li><li>बार-बार पथरी हो तो पथरी की जाँच और 24 घंटे पेशाब की जाँच कराएँ।</li></ul>
+    
+  </section>
+
+  <section id="faq">
+    <h2>अक्सर पूछे जाने वाले सवाल (FAQ)</h2>
+    <details><summary>क्या पथरी दवा से घुल जाती है?</summary><p>Uric acid वाली पथरी कई बार दवा से घुल जाती है। Calcium वाली पथरी, जो सबसे आम है, आमतौर पर नहीं घुलती।</p></details><details><summary>क्या पथरी दोबारा बनती है?</summary><p>हाँ, बहुत से लोगों में कुछ सालों में दोबारा बन जाती है। पानी और खान-पान से इसका खतरा काफ़ी घटता है।</p></details><details><summary>क्या टमाटर के बीज से पथरी बनती है?</summary><p>यह एक आम गलतफ़हमी है। सामान्य मात्रा में टमाटर खाने से पथरी नहीं बनती।</p></details><details><summary>क्या हर पथरी का ऑपरेशन ज़रूरी है?</summary><p>नहीं। छोटी पथरी अक्सर अपने-आप निकल जाती है। बड़ी पथरी के लिए भी ज़्यादातर बिना चीरे वाले तरीके हैं।</p></details><details><summary>पथरी निकलने में कितना समय लगता है?</summary><p>छोटी पथरी अक्सर कुछ दिनों से 4 हफ्तों में निकल जाती है। उससे ज़्यादा समय लगे तो डॉक्टर को दिखाएँ।</p></details>
+  </section>
+
+  <section id="sources">
+    <h2>Medical sources</h2>
+    <ul class="list sources"><li><a href="https://www.nhs.uk/conditions/kidney-stones/" rel="noopener" target="_blank">NHS — Kidney stones</a></li><li><a href="https://www.niddk.nih.gov/health-information/urologic-diseases/kidney-stones" rel="noopener" target="_blank">NIDDK — Kidney stones</a></li><li><a href="https://www.urologyhealth.org/" rel="noopener" target="_blank">Urology Care Foundation</a></li></ul>
+  </section>
 </main>
-<footer style="background:#16283F;color:#B9C7D6" class="py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="grid md:grid-cols-4 gap-6 mb-6" style="font-family:'Mukta',sans-serif">
-      <div><div style="font-family:'Tiro Devanagari Hindi',serif;color:#fff" class="text-lg font-bold mb-2">सहीDoctor</div>
-        <p style="color:#8FA3B5" class="text-sm">हिंदी-प्रथम, मुफ़्त स्वास्थ्य नेविगेशन।</p></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">सेवाएं</div><div class="grid gap-1">
-        <a href="lakshan-janch" style="color:#B9C7D6;text-decoration:none">लक्षण जांच</a>
-        <a href="bimari-guide" style="color:#B9C7D6;text-decoration:none">बीमारी गाइड</a>
-        <a href="doctor-khojen" style="color:#B9C7D6;text-decoration:none">डॉक्टर खोजें</a>
-        <a href="sarkari-aspatal" style="color:#B9C7D6;text-decoration:none">सरकारी अस्पताल</a></div></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">और जानकारी</div><div class="grid gap-1">
-        <a href="ambulance" style="color:#B9C7D6;text-decoration:none">एम्बुलेंस (108)</a>
-        <a href="dawa-dukan" style="color:#B9C7D6;text-decoration:none">दवा दुकान</a>
-        <a href="juden" style="color:#B9C7D6;text-decoration:none">जुड़ें</a></div></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">संस्था व नीति</div><div class="grid gap-1">
-        <a href="about" style="color:#B9C7D6;text-decoration:none">हमारे बारे में</a>
-        <a href="disclaimer" style="color:#B9C7D6;text-decoration:none">चिकित्सा अस्वीकरण</a>
-        <a href="privacy" style="color:#B9C7D6;text-decoration:none">गोपनीयता नीति</a>
-        <a href="contact" style="color:#B9C7D6;text-decoration:none">संपर्क करें</a></div></div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,.12);font-family:'Mukta',sans-serif;color:#7C90A2" class="pt-4 text-xs flex justify-between flex-wrap gap-2">
-      <span>© 2026 सहीDoctor · Quaitronix</span><span>शैक्षिक जानकारी — चिकित्सीय सलाह नहीं।</span></div>
+
+<footer>
+  <div class="in">
+    <p><strong>Disclaimer:</strong> यह जानकारी केवल जागरूकता के लिए है। यह डॉक्टर की सलाह, जाँच या इलाज का विकल्प नहीं है। गंभीर लक्षण होने पर तुरंत नज़दीकी अस्पताल जाएँ या <a href="tel:108">108</a> पर call करें।</p>
+    <p>© 2026 <a href="/">सहीDoctor</a> — मुफ्त हिंदी स्वास्थ्य जानकारी</p>
   </div>
 </footer>
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("/sw.js").catch(function () {});
-    });
-  }
-</script>
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: "hi",
-    includedLanguages: "en,hi,pa,bn,ta,te,mr,gu,kn,ml,ur,or,as,mai,ne,sd,kok",
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, "google_translate_element");
-}
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>

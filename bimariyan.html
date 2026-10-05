@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>बीमारियों की जानकारी — आसान हिंदी में | सहीDoctor</title>
+<meta name="description" content="डेंगू, मलेरिया, टाइफाइड, टीबी, डायबिटीज़, BP, थायराइड, दमा, निमोनिया, पीलिया, पथरी और दूसरी बीमारियों के लक्षण, जाँच, इलाज और कब hospital जाएँ — आसान हिंदी में।">
+<link rel="canonical" href="https://sahidoctor.in/bimariyan">
+<meta name="theme-color" content="#0f5c4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0f5c4d;
+    --green-soft:#e3f0ec;
+    --ink:#1c2b2a;
+    --muted:#526462;
+    --paper:#ffffff;
+    --bg:#f2f6f5;
+    --line:#d5e2df;
+    --red:#b42318;
+    --red-soft:#fdecea;
+    --amber:#93500a;
+    --amber-soft:#fdf3e1;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Mukta","Nirmala UI","Mangal",system-ui,sans-serif;
+    font-size:18px;line-height:1.7;
+  }
+  a{color:var(--green)}
+  a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+  h1,h2{font-family:"Tiro Devanagari Hindi","Nirmala UI","Mangal",serif;font-weight:400;line-height:1.3}
+
+  /* Header */
+  .top{background:var(--green);color:#fff}
+  .top-in{max-width:760px;margin:0 auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center}
+  .logo{color:#fff;text-decoration:none;font-weight:700;font-size:22px}
+  .logo span{font-weight:400;opacity:.85}
+  .top a.call{color:#fff;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,.6);padding:4px 12px;border-radius:6px;font-size:16px}
+
+  /* Section nav */
+  .toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+  .toc ul{max-width:760px;margin:0 auto;padding:10px 18px;list-style:none;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .toc ul::-webkit-scrollbar{display:none}
+  .toc a{display:block;white-space:nowrap;text-decoration:none;font-size:15px;padding:4px 12px;border-radius:999px;background:var(--green-soft);color:var(--green)}
+  .toc a.warn{background:var(--red-soft);color:var(--red);font-weight:600}
+
+  main{max-width:760px;margin:0 auto;padding:8px 18px 40px}
+  .crumb{font-size:15px;color:var(--muted);margin:16px 0 0}
+  .crumb a{color:var(--muted)}
+  h1{font-size:2.2rem;margin:6px 0 8px}
+  .lead{font-size:1.15rem;color:var(--muted);margin:0 0 18px}
+  .meta{font-size:15px;color:var(--muted);border-left:3px solid var(--green);padding-left:12px;margin-bottom:24px}
+
+  /* Quick facts */
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 28px}
+  .facts div{background:var(--paper);padding:12px 14px}
+  .facts dt{font-size:14px;color:var(--muted)}
+  .facts dd{margin:0;font-weight:600;line-height:1.4}
+
+  section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:6px 22px 18px;margin-bottom:18px}
+  h2{font-size:1.55rem;margin:18px 0 8px;color:var(--green)}
+  h3{font-size:1.1rem;margin:18px 0 4px}
+  ul.list{padding-left:22px;margin:8px 0}
+  ul.list li{margin-bottom:6px}
+  .note{background:var(--amber-soft);border-left:4px solid var(--amber);padding:10px 14px;border-radius:0 8px 8px 0;margin:14px 0;font-size:17px}
+
+  /* Emergency card — the one loud element on the page */
+  section.danger{background:var(--red-soft);border:2px solid var(--red)}
+  section.danger h2{color:var(--red)}
+  .danger ul.list li::marker{color:var(--red)}
+  .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:8px;margin:8px 8px 0 0;font-size:17px}
+  .btn.alt{background:#fff;color:var(--red);border:2px solid var(--red)}
+
+  table{width:100%;border-collapse:collapse;font-size:16px;margin:10px 0}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--green-soft);color:var(--green);font-weight:600}
+  .tablewrap{overflow-x:auto}
+
+  .dont li::marker{content:"✕  ";color:var(--red);font-weight:700}
+
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:0}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+  details[open] summary::after{content:"−"}
+  details p{margin:8px 0 0;color:var(--ink)}
+
+  .sources li{font-size:16px}
+
+  footer{background:var(--ink);color:#c9d6d4;font-size:15px}
+  footer .in{max-width:760px;margin:0 auto;padding:22px 18px}
+  footer a{color:#fff}
+
+  @media (max-width:520px){
+    body{font-size:17px}
+    h1{font-size:1.85rem}
+    section{padding:4px 16px 16px}
+    .facts{grid-template-columns:1fr}
+  }
+</style>
+<style>
+.search{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;margin:6px 0 18px;background:var(--paper);color:var(--ink)}
+.search:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+.dlist{list-style:none;margin:0;padding:0;background:var(--paper);border:1px solid var(--line);border-radius:10px}
+.dlist li{border-bottom:1px solid var(--line)}
+.dlist li:last-child{border-bottom:0}
+.dlist a{display:block;padding:14px 18px;text-decoration:none;color:var(--ink)}
+.dlist a:hover{background:var(--green-soft)}
+.dlist strong{color:var(--green);font-size:1.15rem}
+.dlist .en{color:var(--muted);font-size:15px;margin-left:6px}
+.dlist .d{display:block;color:var(--muted);font-size:16px;line-height:1.5}
+.empty{display:none;color:var(--muted);padding:12px 0}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in"><a class="logo" href="/">सही<span>Doctor</span></a><a class="call" href="tel:108">Ambulance 108</a></div></header>
+<main>
+  <p class="crumb"><a href="/">होम</a> › बीमारियाँ</p>
+  <h1>बीमारियों की जानकारी</h1>
+  <p class="lead">हर बीमारी के लक्षण, खतरे के संकेत, जाँच, इलाज, कौन-सा डॉक्टर दिखाएँ और क्या न करें, आसान हिंदी में।</p>
+  <label for="q" class="crumb">बीमारी का नाम लिखें (हिंदी या English)</label>
+  <input id="q" class="search" type="search" placeholder="जैसे: शुगर, BP, typhoid" autocomplete="off">
+  <ul class="dlist" id="list"><li data-k="किडनी की पथरी Kidney Stone kidney-stone दर्द, जाँच और size के हिसाब से इलाज"><a href="/kidney-stone"><strong>किडनी की पथरी</strong><span class="en">Kidney Stone</span><span class="d">दर्द, जाँच और size के हिसाब से इलाज</span></a></li><li data-k="खून की कमी Anemia anemia Hemoglobin, आयरन की गोली और खाना"><a href="/anemia"><strong>खून की कमी</strong><span class="en">Anemia</span><span class="d">Hemoglobin, आयरन की गोली और खाना</span></a></li><li data-k="चिकनगुनिया Chikungunya chikungunya बुखार और जोड़ों का तेज़ दर्द"><a href="/chikungunya"><strong>चिकनगुनिया</strong><span class="en">Chikungunya</span><span class="d">बुखार और जोड़ों का तेज़ दर्द</span></a></li><li data-k="टाइफाइड Typhoid typhoid दूषित पानी से बुखार, सही जाँच और antibiotic"><a href="/typhoid"><strong>टाइफाइड</strong><span class="en">Typhoid</span><span class="d">दूषित पानी से बुखार, सही जाँच और antibiotic</span></a></li><li data-k="टीबी (क्षय रोग) TB tb 2 हफ्ते से ज़्यादा खाँसी, मुफ्त सरकारी इलाज"><a href="/tb"><strong>टीबी (क्षय रोग)</strong><span class="en">TB</span><span class="d">2 हफ्ते से ज़्यादा खाँसी, मुफ्त सरकारी इलाज</span></a></li><li data-k="डायबिटीज़ (शुगर) Diabetes diabetes शुगर की normal range, खान-पान और दवा"><a href="/diabetes"><strong>डायबिटीज़ (शुगर)</strong><span class="en">Diabetes</span><span class="d">शुगर की normal range, खान-पान और दवा</span></a></li><li data-k="डेंगू Dengue dengue मच्छर से फैलने वाला बुखार, platelet और खतरे के संकेत"><a href="/dengue"><strong>डेंगू</strong><span class="en">Dengue</span><span class="d">मच्छर से फैलने वाला बुखार, platelet और खतरे के संकेत</span></a></li><li data-k="थायराइड Thyroid thyroid कम-ज़्यादा थायराइड, TSH जाँच और दवा"><a href="/thyroid"><strong>थायराइड</strong><span class="en">Thyroid</span><span class="d">कम-ज़्यादा थायराइड, TSH जाँच और दवा</span></a></li><li data-k="दमा Asthma asthma साँस फूलना, inhaler और अटैक में क्या करें"><a href="/asthma"><strong>दमा</strong><span class="en">Asthma</span><span class="d">साँस फूलना, inhaler और अटैक में क्या करें</span></a></li><li data-k="दस्त Diarrhea diarrhea ORS बनाने का तरीका और पानी की कमी के संकेत"><a href="/diarrhea"><strong>दस्त</strong><span class="en">Diarrhea</span><span class="d">ORS बनाने का तरीका और पानी की कमी के संकेत</span></a></li><li data-k="निमोनिया Pneumonia pneumonia फेफड़ों का संक्रमण, बच्चों में तेज़ साँस"><a href="/pneumonia"><strong>निमोनिया</strong><span class="en">Pneumonia</span><span class="d">फेफड़ों का संक्रमण, बच्चों में तेज़ साँस</span></a></li><li data-k="पीलिया और Hepatitis Jaundice jaundice आँखें पीली होना, कारण और खान-पान"><a href="/jaundice"><strong>पीलिया और Hepatitis</strong><span class="en">Jaundice</span><span class="d">आँखें पीली होना, कारण और खान-पान</span></a></li><li data-k="मलेरिया Malaria malaria ठंड लगकर बुखार, मुफ्त जाँच और इलाज"><a href="/malaria"><strong>मलेरिया</strong><span class="en">Malaria</span><span class="d">ठंड लगकर बुखार, मुफ्त जाँच और इलाज</span></a></li><li data-k="हाई BP High Blood Pressure high-bp normal BP, सही नापना और लकवा के संकेत"><a href="/high-bp"><strong>हाई BP</strong><span class="en">High Blood Pressure</span><span class="d">normal BP, सही नापना और लकवा के संकेत</span></a></li></ul>
+  <p class="empty" id="empty">इस नाम की बीमारी अभी नहीं मिली। दूसरा नाम लिखकर देखें।</p>
+</main>
+<footer><div class="in">
+<p><strong>Disclaimer:</strong> यह जानकारी केवल जागरूकता के लिए है। यह डॉक्टर की सलाह, जाँच या इलाज का विकल्प नहीं है। गंभीर लक्षण होने पर तुरंत नज़दीकी अस्पताल जाएँ या <a href="tel:108">108</a> पर call करें।</p>
+<p>© 2026 <a href="/">सहीDoctor</a> — मुफ्त हिंदी स्वास्थ्य जानकारी</p>
+</div></footer>
+<script>
+var alias={"शुगर":"diabetes","sugar":"diabetes","मधुमेह":"diabetes","bp":"high-bp","ब्लड प्रेशर":"high-bp","pressure":"high-bp","दमा":"asthma","सांस":"asthma","पथरी":"kidney-stone","stone":"kidney-stone","खून":"anemia","क्षय":"tb","tuberculosis":"tb","hepatitis":"jaundice","जॉन्डिस":"jaundice","loose":"diarrhea","पेचिश":"diarrhea","डायरिया":"diarrhea"};
+var q=document.getElementById('q'),items=document.querySelectorAll('#list li'),empty=document.getElementById('empty');
+q.addEventListener('input',function(){
+  var v=q.value.trim().toLowerCase(),n=0,extra='';
+  for(var k in alias){if(v&&k.indexOf(v)===0)extra+=' '+alias[k];}
+  items.forEach(function(li){
+    var t=li.getAttribute('data-k').toLowerCase();
+    var show=!v||t.indexOf(v)>-1||(extra&&extra.indexOf(t.split(' ').slice(-1)[0])>-1)||(extra&&extra.split(' ').some(function(s){return s&&t.indexOf(s)>-1;}));
+    li.style.display=show?'':'none'; if(show)n++;
+  });
+  empty.style.display=n?'none':'block';
+});
+</script>
+</body>
+</html>

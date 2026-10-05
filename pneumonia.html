@@ -1,53 +1,56 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
+<!-- सहीDoctor disease page. Template वही है जो dengue.html का है। -->
 <meta charset="UTF-8">
-<script>
-/* Make React tolerant of Google Translate's DOM changes (prevents crashes) */
-(function () {
-  if (typeof Node === "function" && Node.prototype) {
-    var rc = Node.prototype.removeChild;
-    Node.prototype.removeChild = function (c) { if (c.parentNode !== this) { return c; } return rc.apply(this, arguments); };
-    var ib = Node.prototype.insertBefore;
-    Node.prototype.insertBefore = function (n, r) { if (r && r.parentNode !== this) { return n; } return ib.apply(this, arguments); };
-  }
-})();
-</script>
-<style>
-  #lang-bar { background:#0F766E; color:#fff; padding:5px 12px; font-size:13px; display:flex; align-items:center; gap:8px; justify-content:center; font-family:system-ui,sans-serif; flex-wrap:wrap; }
-  #lang-bar .goog-te-combo { font-size:14px; padding:3px 8px; border-radius:6px; border:none; margin:0; max-width:200px; }
-  .goog-te-gadget { font-size:0 !important; }
-  .goog-te-gadget span, .goog-logo-link { display:none !important; }
-  .goog-te-banner-frame, .skiptranslate iframe { display:none !important; }
-  body { top:0 !important; position:static !important; }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>निमोनिया (Pneumonia) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor</title>
-<meta name="description" content="निमोनिया (Pneumonia) के आम लक्षण: बुखार के साथ खाँसी और बलगम, साँस तेज़ चलना, सीने में दर्द (साँस लेने पर)। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।">
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#1D3557">
-<link rel="apple-touch-icon" href="/icons/icon-180.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="सहीDoctor">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>निमोनिया (Pneumonia): लक्षण, बच्चों में तेज़ साँस की पहचान, जाँच, इलाज और टीके | सहीDoctor</title>
+<meta name="description" content="निमोनिया क्या है, कैसे फैलता है, लक्षण, बच्चों में तेज़ साँस गिनने का तरीका, खतरे के संकेत, X-ray और oxygen जाँच, इलाज, PCV टीका और बचाव — आसान हिंदी में।">
 <link rel="canonical" href="https://sahidoctor.in/pneumonia">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<meta name="author" content="SahiDoctor · Quaitronix">
-<meta name="geo.region" content="IN"><meta name="geo.placename" content="India">
-<meta property="og:type" content="article"><meta property="og:site_name" content="सहीDoctor">
-<meta property="og:title" content="निमोनिया (Pneumonia) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor"><meta property="og:description" content="निमोनिया (Pneumonia) के आम लक्षण: बुखार के साथ खाँसी और बलगम, साँस तेज़ चलना, सीने में दर्द (साँस लेने पर)। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।">
-<meta property="og:url" content="https://sahidoctor.in/pneumonia"><meta property="og:image" content="https://sahidoctor.in/og-image.png">
-<meta property="og:locale" content="hi_IN">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="निमोनिया (Pneumonia) — लक्षण, खतरे के निशान और कौन-सा डॉक्टर | सहीDoctor"><meta name="twitter:description" content="निमोनिया (Pneumonia) के आम लक्षण: बुखार के साथ खाँसी और बलगम, साँस तेज़ चलना, सीने में दर्द (साँस लेने पर)। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।"><meta name="twitter:image" content="https://sahidoctor.in/og-image.png">
+<meta property="og:title" content="निमोनिया (Pneumonia): लक्षण, जाँच और इलाज — आसान हिंदी में">
+<meta property="og:description" content="निमोनिया क्या है, कैसे फैलता है, लक्षण, बच्चों में तेज़ साँस गिनने का तरीका, खतरे के संकेत, X-ray और oxygen जाँच, इलाज, PCV टीका और बचाव — आसान हिंदी में।">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sahidoctor.in/pneumonia">
+<meta name="theme-color" content="#0f5c4d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"MedicalWebPage","name":"निमोनिया (Pneumonia)","inLanguage":"hi","url":"https://sahidoctor.in/pneumonia","description":"निमोनिया (Pneumonia) के आम लक्षण: बुखार के साथ खाँसी और बलगम, साँस तेज़ चलना, सीने में दर्द (साँस लेने पर)। खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए — सरल हिंदी में, मुफ़्त।","publisher":{"@type":"Organization","name":"सहीDoctor"},"about":{"@type":"MedicalCondition","name":"निमोनिया","alternateName":"Pneumonia"}}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-{"@type":"ListItem","position":1,"name":"सहीDoctor","item":"https://sahidoctor.in/"},
-{"@type":"ListItem","position":2,"name":"बीमारी गाइड","item":"https://sahidoctor.in/bimari-guide"},
-{"@type":"ListItem","position":3,"name":"निमोनिया","item":"https://sahidoctor.in/pneumonia"}]}
+{
+ "@context": "https://schema.org",
+ "@type": "MedicalWebPage",
+ "name": "निमोनिया (Pneumonia): लक्षण, जाँच और इलाज — आसान हिंदी में",
+ "url": "https://sahidoctor.in/pneumonia",
+ "inLanguage": "hi",
+ "dateModified": "2026-10-05",
+ "about": {
+  "@type": "MedicalCondition",
+  "name": "Pneumonia",
+  "alternateName": "निमोनिया",
+  "signOrSymptom": [
+   {
+    "@type": "MedicalSymptom",
+    "name": "बलगम वाली खाँसी"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "बुखार"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "तेज़ साँस"
+   },
+   {
+    "@type": "MedicalSymptom",
+    "name": "सीने में दर्द"
+   }
+  ]
+ },
+ "audience": {
+  "@type": "PeopleAudience",
+  "geographicArea": "India"
+ }
+}
 </script>
 <script type="application/ld+json">
 {
@@ -56,180 +59,255 @@
  "mainEntity": [
   {
    "@type": "Question",
-   "name": "निमोनिया के मुख्य लक्षण क्या हैं?",
+   "name": "क्या निमोनिया फैलता है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "निमोनिया के आम लक्षण हैं: बुखार के साथ खाँसी और बलगम, साँस तेज़ चलना, सीने में दर्द (साँस लेने पर), ठंड लगना, बुज़ुर्गों में सिर्फ़ सुस्ती/उलझन। लक्षण हर व्यक्ति में अलग हो सकते हैं, इसलिए पुष्टि जाँच व डॉक्टर से ही होती है।"
+    "text": "निमोनिया पैदा करने वाले कीटाणु खाँसी-छींक से फैल सकते हैं, इसलिए मरीज़ मुँह ढककर खाँसे और हाथ धोते रहें।"
    }
   },
   {
    "@type": "Question",
-   "name": "निमोनिया में कब तुरंत डॉक्टर के पास जाना चाहिए?",
+   "name": "निमोनिया ठीक होने में कितना समय लगता है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "इन खतरे के निशानों पर देर न करें: साँस बहुत तेज़/मुश्किल, होंठ नीले, छोटे बच्चे की पसली धँसना। गंभीर स्थिति में तुरंत नज़दीकी अस्पताल जाएँ या 108 पर कॉल करें।"
+    "text": "बुखार अक्सर कुछ दिनों में उतर जाता है, पर पूरी ताकत लौटने में 2–6 हफ्ते लग सकते हैं।"
    }
   },
   {
    "@type": "Question",
-   "name": "निमोनिया के लिए कौन-सा डॉक्टर दिखाएँ?",
+   "name": "क्या निमोनिया दोबारा हो सकता है?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "आम तौर पर फेफड़ा रोग विशेषज्ञ (Pulmonologist) को दिखाया जाता है। सहीDoctor के 'डॉक्टर खोजें' पेज पर अपने इलाक़े के नज़दीकी फेफड़ा रोग विशेषज्ञ (Pulmonologist) ढूँढ सकते हैं।"
+    "text": "हाँ। इसलिए टीके, पोषण और धुएँ से बचाव ज़रूरी है।"
    }
   },
   {
    "@type": "Question",
-   "name": "निमोनिया के बारे में ज़रूरी बात क्या है?",
+   "name": "क्या घर पर pulse oximeter रखना चाहिए?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "बच्चों और बुज़ुर्गों के लिए ख़तरनाक — देर न करें।"
+    "text": "बुज़ुर्ग या फेफड़ों की बीमारी वाले घर में यह उपयोगी है। SpO2 94% से कम आए तो डॉक्टर को दिखाएँ।"
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "क्या ठंड लगने से निमोनिया होता है?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "ठंड से सीधे निमोनिया नहीं होता, यह कीटाणुओं से होता है। पर ठंड के मौसम में संक्रमण ज़्यादा फैलते हैं।"
    }
   }
  ]
 }
 </script>
-<link rel="stylesheet" href="tailwind.css">
 <style>
-  html,body{min-height:100%;}
-  body{
-    margin:0;
-    background-color:#E8F5EA;
-    background-image:
-      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cpath d='M20 13h4v7h7v4h-7v7h-4v-7h-7v-4h7z' fill='%230F766E' fill-opacity='0.045'/%3E%3C/svg%3E"),
-      linear-gradient(165deg,#EEF8F0 0%,#DEF1E2 50%,#CDE9D5 100%);
-    background-repeat: repeat, no-repeat;
-    background-size: 44px 44px, 100% 100%;
-    background-attachment: scroll, scroll;
+  :root{
+    --green:#0f5c4d;
+    --green-soft:#e3f0ec;
+    --ink:#1c2b2a;
+    --muted:#526462;
+    --paper:#ffffff;
+    --bg:#f2f6f5;
+    --line:#d5e2df;
+    --red:#b42318;
+    --red-soft:#fdecea;
+    --amber:#93500a;
+    --amber-soft:#fdf3e1;
   }
-</style>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Mukta:wght@400;500;600;700&display=swap');
-  .prose-hi h2{font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.3rem;font-weight:800;margin:1.3rem 0 .5rem}
-  .prose-hi h3{font-family:'Tiro Devanagari Hindi',serif;color:#0F766E;font-size:1.1rem;font-weight:700}
-  .prose-hi p,.prose-hi li{font-family:'Mukta',sans-serif;color:#1D3557;font-size:1rem;line-height:1.75}
-  .prose-hi ul{margin:.4rem 0 .8rem;padding-left:1.2rem;list-style:disc} .prose-hi li{margin:.25rem 0}
-  .prose-hi a{color:#0F766E} .prose-hi b{color:#1D3557}
-  .sd-faq-item{border:1px solid #E5DFD2;border-radius:10px;margin-bottom:.5rem;background:#fff}
-  .sd-faq-item summary{font-family:'Mukta',sans-serif;font-weight:600;color:#1D3557;cursor:pointer;padding:.65rem .9rem;list-style:none;font-size:.98rem}
-  .sd-faq-item summary::-webkit-details-marker{display:none}
-  .sd-faq-item summary::before{content:"＋";color:#0F766E;font-weight:700;margin-right:.5rem}
-  .sd-faq-item[open] summary::before{content:"－"}
-  .sd-faq-a{font-family:'Mukta',sans-serif;color:#45606f;font-size:.95rem;line-height:1.7;padding:0 .9rem .8rem 2rem}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Mukta","Nirmala UI","Mangal",system-ui,sans-serif;
+    font-size:18px;line-height:1.7;
+  }
+  a{color:var(--green)}
+  a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+  h1,h2{font-family:"Tiro Devanagari Hindi","Nirmala UI","Mangal",serif;font-weight:400;line-height:1.3}
+
+  /* Header */
+  .top{background:var(--green);color:#fff}
+  .top-in{max-width:760px;margin:0 auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center}
+  .logo{color:#fff;text-decoration:none;font-weight:700;font-size:22px}
+  .logo span{font-weight:400;opacity:.85}
+  .top a.call{color:#fff;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,.6);padding:4px 12px;border-radius:6px;font-size:16px}
+
+  /* Section nav */
+  .toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+  .toc ul{max-width:760px;margin:0 auto;padding:10px 18px;list-style:none;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .toc ul::-webkit-scrollbar{display:none}
+  .toc a{display:block;white-space:nowrap;text-decoration:none;font-size:15px;padding:4px 12px;border-radius:999px;background:var(--green-soft);color:var(--green)}
+  .toc a.warn{background:var(--red-soft);color:var(--red);font-weight:600}
+
+  main{max-width:760px;margin:0 auto;padding:8px 18px 40px}
+  .crumb{font-size:15px;color:var(--muted);margin:16px 0 0}
+  .crumb a{color:var(--muted)}
+  h1{font-size:2.2rem;margin:6px 0 8px}
+  .lead{font-size:1.15rem;color:var(--muted);margin:0 0 18px}
+  .meta{font-size:15px;color:var(--muted);border-left:3px solid var(--green);padding-left:12px;margin-bottom:24px}
+
+  /* Quick facts */
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 0 28px}
+  .facts div{background:var(--paper);padding:12px 14px}
+  .facts dt{font-size:14px;color:var(--muted)}
+  .facts dd{margin:0;font-weight:600;line-height:1.4}
+
+  section{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:6px 22px 18px;margin-bottom:18px}
+  h2{font-size:1.55rem;margin:18px 0 8px;color:var(--green)}
+  h3{font-size:1.1rem;margin:18px 0 4px}
+  ul.list{padding-left:22px;margin:8px 0}
+  ul.list li{margin-bottom:6px}
+  .note{background:var(--amber-soft);border-left:4px solid var(--amber);padding:10px 14px;border-radius:0 8px 8px 0;margin:14px 0;font-size:17px}
+
+  /* Emergency card — the one loud element on the page */
+  section.danger{background:var(--red-soft);border:2px solid var(--red)}
+  section.danger h2{color:var(--red)}
+  .danger ul.list li::marker{color:var(--red)}
+  .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:8px;margin:8px 8px 0 0;font-size:17px}
+  .btn.alt{background:#fff;color:var(--red);border:2px solid var(--red)}
+
+  table{width:100%;border-collapse:collapse;font-size:16px;margin:10px 0}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--green-soft);color:var(--green);font-weight:600}
+  .tablewrap{overflow-x:auto}
+
+  .dont li::marker{content:"✕  ";color:var(--red);font-weight:700}
+
+  details{border-bottom:1px solid var(--line);padding:10px 0}
+  details:last-child{border-bottom:0}
+  summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+  details[open] summary::after{content:"−"}
+  details p{margin:8px 0 0;color:var(--ink)}
+
+  .sources li{font-size:16px}
+
+  footer{background:var(--ink);color:#c9d6d4;font-size:15px}
+  footer .in{max-width:760px;margin:0 auto;padding:22px 18px}
+  footer a{color:#fff}
+
+  @media (max-width:520px){
+    body{font-size:17px}
+    h1{font-size:1.85rem}
+    section{padding:4px 16px 16px}
+    .facts{grid-template-columns:1fr}
+  }
 </style>
 </head>
 <body>
-<div id="lang-bar"><span>🌐 अपनी भाषा चुनें / Choose your language:</span><div id="google_translate_element"></div></div>
-<header style="background:#1D3557" class="px-4 py-4">
-  <div class="max-w-5xl mx-auto flex items-center justify-between flex-wrap gap-2">
-    <div>
-      <a href="/" style="font-family:'Tiro Devanagari Hindi',serif;color:#fff;text-decoration:none" class="text-2xl font-extrabold leading-tight block">सही<span style="color:#E8930C">Doctor</span></a>
-      <div style="font-family:'Mukta',sans-serif;color:#B9C7D6" class="text-xs">लक्षण पहचानें · सही डॉक्टर चुनें · फ़ीस तुलना करें</div>
-    </div>
-    <nav class="flex gap-1 flex-wrap">
-            <a href="lakshan-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">लक्षण जाँच</a>
-            <a href="bimari-guide" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">बीमारी गाइड</a>
-            <a href="doctor-khojen" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">डॉक्टर खोजें</a>
-            <a href="lab-janch" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जाँच-लैब</a>
-            <a href="sarkari-aspatal" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">सरकारी अस्पताल</a>
-            <a href="ambulance" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">🚑 एम्बुलेंस</a>
-            <a href="dawa-dukan" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">💊 दवा दुकान</a>
-            <a href="juden" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">➕ जुड़ें</a>
-            <a href="jankari" style="font-family:'Mukta',system-ui,sans-serif;color:#B9C7D6;text-decoration:none" class="px-3 py-1.5 rounded-lg text-sm font-semibold hover:text-white">जानकारी</a>
-    </nav>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="/">सही<span>Doctor</span></a>
+    <a class="call" href="tel:108">Ambulance 108</a>
   </div>
 </header>
-<main class="max-w-3xl mx-auto px-4 py-8">
-  <nav style="font-family:'Mukta',sans-serif;color:#5A6B7B" class="text-sm mb-3"><a href="/" style="color:#0F766E;text-decoration:none">मुख्य पृष्ठ</a> › <a href="bimari-guide" style="color:#0F766E;text-decoration:none">बीमारी गाइड</a> › निमोनिया</nav>
-  <div class="prose-hi rounded-xl p-6" style="background:#FBF8F1;border:1px solid #E5DFD2;box-shadow:0 4px 16px rgba(29,53,87,.06)">
-    <h1 style="font-family:'Tiro Devanagari Hindi',serif;color:#1D3557;font-size:1.7rem;font-weight:800;margin:0 0 .6rem">निमोनिया <span style="color:#0F766E;font-size:1.1rem">(Pneumonia)</span></h1>
 
-    <span style="font-family:'Mukta',sans-serif;background:#FDF1DC;color:#B5730B;border:1px solid #F0D9A8;border-radius:999px;padding:2px 12px;font-size:.8rem;display:inline-block;margin-bottom:.6rem">श्रेणी: साँस / Respiratory</span>
-    <p>निमोनिया (Pneumonia) से जुड़ी आम जानकारी — इसके लक्षण, खतरे के निशान और किस विशेषज्ञ डॉक्टर को दिखाना चाहिए, सरल हिंदी में। यह जानकारी केवल शैक्षिक है; किसी भी बीमारी की पुष्टि व इलाज योग्य डॉक्टर से ही कराएँ।</p>
+<nav class="toc" aria-label="इस page के हिस्से">
+  <ul><li><a href="#kya-hai">क्या है</a></li><li><a href="#kaise-failta">कैसे फैलता</a></li><li><a href="#lakshan">लक्षण</a></li><li><a class="warn" href="#khatre">खतरे के संकेत</a></li><li><a href="#jaanch">जाँच</a></li><li><a href="#ilaj">इलाज</a></li><li><a href="#bachche">बच्चे</a></li><li><a href="#bujurg">बुज़ुर्ग</a></li><li><a href="#hospital">कब hospital</a></li><li><a href="#doctor">कौन-सा doctor</a></li><li><a href="#kya-na">क्या न करें</a></li><li><a href="#bachav">बचाव</a></li><li><a href="#faq">FAQ</a></li></ul>
+</nav>
 
-    <h2>निमोनिया के लक्षण</h2>
-    <ul>
-      <li>बुखार के साथ खाँसी और बलगम</li>
-      <li>साँस तेज़ चलना</li>
-      <li>सीने में दर्द (साँस लेने पर)</li>
-      <li>ठंड लगना</li>
-      <li>बुज़ुर्गों में सिर्फ़ सुस्ती/उलझन</li>
-    </ul>
+<main>
+  <p class="crumb"><a href="/">होम</a> › <a href="/bimariyan">बीमारियाँ</a> › निमोनिया</p>
+  <h1>निमोनिया (Pneumonia)</h1>
+  <p class="lead">फेफड़ों का संक्रमण जिसमें हवा की थैलियों में पानी या मवाद भर जाता है। छोटे बच्चों और बुज़ुर्गों के लिए यह खतरनाक है, पर समय पर पहचान और इलाज से ठीक हो जाता है।</p>
+  <p class="meta">
+    Last updated: 5 अक्टूबर 2026<br>
+    यह जानकारी WHO और भारत सरकार (SAANS अभियान) के दिशानिर्देशों पर आधारित है।
+  </p>
+  <dl class="facts"><div><dt>सबसे ज़्यादा खतरा</dt><dd>5 साल से छोटे बच्चे, बुज़ुर्ग</dd></div><div><dt>बच्चों में पहचान</dt><dd>तेज़ साँस, पसली धँसना</dd></div><div><dt>मुख्य जाँच</dt><dd>Oxygen (SpO2), छाती का X-ray</dd></div><div><dt>बचाव</dt><dd>PCV टीका, सरकारी टीकाकरण में मुफ्त</dd></div></dl>
 
-    <h2>खतरे के निशान — कब तुरंत डॉक्टर के पास जाएँ</h2>
-    <div style="background:#FBEAE7;border:1px solid #E6b3ab;border-left:5px solid #C0392B;border-radius:10px;padding:.4rem 1rem .6rem">
-    <ul style="margin:.4rem 0">
-      <li>साँस बहुत तेज़/मुश्किल</li>
-      <li>होंठ नीले</li>
-      <li>छोटे बच्चे की पसली धँसना</li>
-    </ul>
-    </div>
+  <section id="kya-hai">
+    <h2>निमोनिया क्या है?</h2>
+    <p>निमोनिया में फेफड़ों की छोटी हवा की थैलियों (alveoli) में संक्रमण होकर पानी या मवाद भर जाता है। इससे शरीर में oxygen कम पहुँचती है और साँस लेना मुश्किल हो जाता है।</p><p>यह <strong>बैक्टीरिया</strong> (जैसे Pneumococcus), <strong>वायरस</strong> (जैसे flu, RSV, COVID) या दूसरे कीटाणुओं से हो सकता है।</p>
+    
+  </section>
 
-    <h2>कौन-सा डॉक्टर दिखाएँ</h2>
-    <p>निमोनिया के लिए आम तौर पर <b>फेफड़ा रोग विशेषज्ञ (Pulmonologist)</b> को दिखाया जाता है।</p>
-    <p><a href="doctor-khojen?spec=Pulmonologist" style="display:inline-block;background:#0F766E;color:#fff;font-family:'Tiro Devanagari Hindi',serif;font-weight:700;padding:.6rem 1.3rem;border-radius:10px;text-decoration:none">🔍 नज़दीकी Pulmonologist डॉक्टर खोजें →</a></p>
+  <section id="kaise-failta">
+    <h2>कैसे फैलता है? किसे ज़्यादा खतरा?</h2>
+    <ul class="list"><li>संक्रमित व्यक्ति की खाँसी-छींक की बूँदों से कीटाणु फैलते हैं।</li><li>सर्दी-ज़ुकाम या flu के बाद भी निमोनिया हो सकता है।</li></ul><h3>ज़्यादा खतरा</h3><ul class="list"><li>5 साल से छोटे बच्चे, खासकर कम वज़न और कुपोषित बच्चे</li><li>65 साल से ज़्यादा उम्र के लोग</li><li>धूम्रपान करने वाले</li><li>दमा, COPD, दिल, डायबिटीज़ या किडनी के मरीज़</li><li>चूल्हे के धुएँ वाले घर</li><li>जिनका टीकाकरण पूरा नहीं हुआ</li></ul>
+    
+  </section>
 
-    <h2>ज़रूरी बात</h2>
-    <p style="background:#E0F0EE;border-left:4px solid #0F766E;padding:.6rem .9rem;border-radius:8px">बच्चों और बुज़ुर्गों के लिए ख़तरनाक — देर न करें।</p>
+  <section id="lakshan">
+    <h2>लक्षण</h2>
+    <ul class="list"><li>खाँसी, पीला, हरा या खून वाला बलगम</li><li>बुखार, ठंड और कंपकंपी</li><li><strong>तेज़ साँस</strong> और साँस फूलना</li><li>साँस लेने या खाँसने पर सीने में दर्द</li><li>बहुत थकान, भूख न लगना</li><li>बुज़ुर्गों में भ्रम या अचानक कमज़ोरी, कई बार बुखार के बिना</li></ul><h3>बच्चों में तेज़ साँस कैसे पहचानें</h3><p>बच्चा शांत हो तब 1 मिनट तक पेट या सीने का उठना-गिरना गिनें:</p><div class="tablewrap"><table><tr><th>बच्चे की उम्र</th><th>तेज़ साँस माना जाता है</th></tr><tr><td>2 महीने से कम</td><td>60 या ज़्यादा प्रति मिनट</td></tr><tr><td>2 से 12 महीने</td><td>50 या ज़्यादा प्रति मिनट</td></tr><tr><td>1 से 5 साल</td><td>40 या ज़्यादा प्रति मिनट</td></tr></table></div><p class="note">साँस लेते समय बच्चे की पसलियों के नीचे का हिस्सा अंदर धँसना (chest indrawing) गंभीर निमोनिया का संकेत है।</p>
+    
+  </section>
 
-    <h2>अक्सर पूछे जाने वाले सवाल</h2>
-      <details class="sd-faq-item"><summary>निमोनिया के मुख्य लक्षण क्या हैं?</summary><div class="sd-faq-a">निमोनिया के आम लक्षण हैं: बुखार के साथ खाँसी और बलगम, साँस तेज़ चलना, सीने में दर्द (साँस लेने पर), ठंड लगना, बुज़ुर्गों में सिर्फ़ सुस्ती/उलझन। लक्षण हर व्यक्ति में अलग हो सकते हैं, इसलिए पुष्टि जाँच व डॉक्टर से ही होती है।</div></details>
-      <details class="sd-faq-item"><summary>निमोनिया में कब तुरंत डॉक्टर के पास जाना चाहिए?</summary><div class="sd-faq-a">इन खतरे के निशानों पर देर न करें: साँस बहुत तेज़/मुश्किल, होंठ नीले, छोटे बच्चे की पसली धँसना। गंभीर स्थिति में तुरंत नज़दीकी अस्पताल जाएँ या 108 पर कॉल करें।</div></details>
-      <details class="sd-faq-item"><summary>निमोनिया के लिए कौन-सा डॉक्टर दिखाएँ?</summary><div class="sd-faq-a">आम तौर पर फेफड़ा रोग विशेषज्ञ (Pulmonologist) को दिखाया जाता है। सहीDoctor के &#x27;डॉक्टर खोजें&#x27; पेज पर अपने इलाक़े के नज़दीकी फेफड़ा रोग विशेषज्ञ (Pulmonologist) ढूँढ सकते हैं।</div></details>
-      <details class="sd-faq-item"><summary>निमोनिया के बारे में ज़रूरी बात क्या है?</summary><div class="sd-faq-a">बच्चों और बुज़ुर्गों के लिए ख़तरनाक — देर न करें।</div></details>
+  <section id="khatre" class="danger">
+    <h2>खतरे के संकेत (Warning signs)</h2>
+    <h3>बच्चों में</h3><ul class="list"><li>दूध या पानी न पी पाना</li><li>सब कुछ उल्टी कर देना</li><li>झटके आना</li><li>बहुत सुस्त या बेहोश</li><li>होंठ या जीभ नीली पड़ना</li><li>साँस में कराहने की आवाज़, पसलियाँ धँसना</li></ul><h3>बड़ों में</h3><ul class="list"><li>आराम करते समय भी साँस फूलना</li><li>होंठ या नाखून नीले</li><li>भ्रम या बहुत सुस्ती</li><li>Pulse oximeter पर <strong>SpO2 94% से कम</strong></li><li>खाँसी में खून</li><li>बेहोशी, चक्कर या बहुत कमज़ोरी</li><li>तेज़ बुखार जो दवा से न उतरे</li></ul>
+    <a class="btn" href="tel:108">108 पर Call करें</a><a class="btn alt" href="tel:112">112 Emergency</a>
+  </section>
 
-    <h2>संदर्भ</h2>
-    <ol style="margin:.3rem 0 .4rem;padding-left:1.4rem;font-size:.95rem"><li style="margin:.25rem 0;word-break:break-word"><a href="https://www.who.int/news-room/fact-sheets/detail/pneumonia" target="_blank" rel="noopener noreferrer" style="color:#0F766E">WHO — Pneumonia fact sheet</a></li><li style="margin:.25rem 0;word-break:break-word"><a href="https://mohfw.gov.in/" target="_blank" rel="noopener noreferrer" style="color:#0F766E">स्वास्थ्य एवं परिवार कल्याण मंत्रालय, भारत सरकार (MoHFW)</a></li></ol>
-    <p style="color:#8A96A3;font-size:.82rem;margin:0">ये बाहरी वेबसाइटें हैं; जानकारी उनके सामान्य दिशानिर्देशों पर आधारित है। अंतिम समीक्षा: अक्टूबर 2026</p>
+  <section id="jaanch">
+    <h2>निमोनिया की जाँच</h2>
+    <div class="tablewrap"><table><tr><th>जाँच</th><th>क्या बताती है</th></tr><tr><td>डॉक्टर द्वारा जाँच, साँस गिनना</td><td>शुरुआती पहचान</td></tr><tr><td><strong>Pulse oximeter (SpO2)</strong></td><td>खून में oxygen, गंभीरता</td></tr><tr><td><strong>छाती का X-ray</strong></td><td>फेफड़ों में संक्रमण कहाँ और कितना</td></tr><tr><td>CBC, CRP</td><td>संक्रमण और सूजन</td></tr><tr><td>बलगम जाँच, flu/COVID जाँच</td><td>कीटाणु का प्रकार (ज़रूरत हो तो)</td></tr></table></div>
+    
+  </section>
 
-    <p class="sd-seo-note" style="margin-top:1.2rem;color:#8A96A3;font-size:.85rem;border-top:1px dashed #E5DFD2;padding-top:.7rem">यह जानकारी केवल शैक्षिक है, चिकित्सीय सलाह या निदान नहीं। गंभीर लक्षण में तुरंत डॉक्टर से मिलें या <a href="tel:108" style="color:#0F766E;font-weight:600">108</a> पर कॉल करें।</p>
+  <section id="ilaj">
+    <h2>इलाज</h2>
+    <ul class="list"><li>बैक्टीरिया वाले निमोनिया में डॉक्टर <strong>antibiotic</strong> देते हैं। पूरा कोर्स लें।</li><li>वायरल निमोनिया में antibiotic काम नहीं करती। आराम और देखभाल मुख्य इलाज है, कुछ मामलों में antiviral दवा।</li><li>Oxygen कम होने पर hospital में oxygen दी जाती है।</li><li>आराम करें, भरपूर पानी और गरम तरल लें, बुखार के लिए डॉक्टर की सलाह से Paracetamol।</li><li>बुखार कुछ दिनों में उतर जाता है, पर खाँसी और थकान कुछ हफ्ते रह सकती है।</li></ul>
+    
+  </section>
 
-    <h3 style="font-family:'Tiro Devanagari Hindi',serif;color:#0F766E;margin-top:1.2rem">संबंधित</h3>
-    <p style="margin:.3rem 0"><a href="tuberculosis-tb" style="color:#0F766E;text-decoration:none;background:#E0F0EE;border:1px solid #B8DAD5;border-radius:999px;padding:3px 12px;font-size:.9rem;display:inline-block;margin:0 6px 6px 0">टीबी (क्षय रोग)</a><a href="asthma" style="color:#0F766E;text-decoration:none;background:#E0F0EE;border:1px solid #B8DAD5;border-radius:999px;padding:3px 12px;font-size:.9rem;display:inline-block;margin:0 6px 6px 0">दमा</a></p>
-    <p style="margin:.4rem 0"><a href="bimari-guide" style="color:#0F766E;font-weight:600">← सभी बीमारियाँ (बीमारी गाइड)</a> · <a href="lakshan-janch" style="color:#0F766E;font-weight:600">लक्षण जांच</a></p>
-  </div>
+  <section id="bachche">
+    <h2>बच्चों में निमोनिया</h2>
+    <ul class="list"><li>बच्चों में निमोनिया दुनिया भर में मौत का बड़ा कारण है, पर इससे बचाव और इलाज संभव है।</li><li>तेज़ साँस या पसली धँसना दिखे तो उसी दिन डॉक्टर या ASHA को दिखाएँ।</li><li>माँ का दूध जारी रखें। बच्चा पी न पाए तो तुरंत hospital जाएँ।</li><li><strong>PCV (निमोनिया का टीका)</strong>, pentavalent और खसरे का टीका सरकारी टीकाकरण में मुफ्त हैं, समय पर लगवाएँ।</li><li>छोटे बच्चों को खाँसी-ज़ुकाम का सिरप डॉक्टर की सलाह के बिना न दें।</li></ul>
+    
+  </section>
+
+  <section id="bujurg">
+    <h2>बुज़ुर्गों में निमोनिया</h2>
+    <ul class="list"><li>बुज़ुर्गों में बुखार और खाँसी कम हो सकती है, पर भ्रम, गिरना या खाना छोड़ देना निमोनिया के संकेत हो सकते हैं।</li><li>पुरानी बीमारी वाले बुज़ुर्गों को जल्दी hospital की ज़रूरत पड़ सकती है।</li><li>Pneumococcal और flu का टीका लगवाने के बारे में डॉक्टर से पूछें।</li><li>बिस्तर पर रहने वाले बुज़ुर्गों को खाना बैठाकर खिलाएँ, ताकि खाना साँस की नली में न जाए।</li></ul>
+    
+  </section>
+
+  <section id="hospital">
+    <h2>कब hospital जाएँ?</h2>
+    <ul class="list"><li>ऊपर दिया कोई भी <a href="#khatre">खतरे का संकेत</a> दिखे</li><li>2 महीने से छोटे बच्चे को बुखार या तेज़ साँस</li><li>Antibiotic के 2–3 दिन बाद भी आराम न हो</li><li>मरीज़ बुज़ुर्ग हो या पुरानी बीमारी हो</li></ul>
+    
+  </section>
+
+  <section id="doctor">
+    <h2>कौन-सा doctor दिखाएँ?</h2>
+    <ul class="list"><li><strong>General Physician (MBBS)</strong> / PHC</li><li><strong>Pediatrician</strong>: बच्चों के लिए</li><li><strong>Pulmonologist / Chest Physician</strong></li><li><strong>MD Medicine</strong>: बुज़ुर्ग या गंभीर मरीज़</li></ul><p><a href="/">सहीDoctor पर अपने पास के doctor और hospital खोजें</a></p>
+    
+  </section>
+
+  <section id="kya-na">
+    <h2>क्या न करें?</h2>
+    <ul class="list dont"><li>अपने मन से antibiotic न लें, और न बीच में बंद करें।</li><li>तेज़ साँस वाले बच्चे का घरेलू नुस्खों से इलाज करके समय न गँवाएँ।</li><li>छोटे बच्चों को डॉक्टर की सलाह के बिना खाँसी का सिरप न दें।</li><li>मरीज़ के पास धूम्रपान न करें, चूल्हे का धुआँ न होने दें।</li><li>झोलाछाप से drip या injection न लगवाएँ।</li></ul>
+    
+  </section>
+
+  <section id="bachav">
+    <h2>बचाव कैसे करें?</h2>
+    <ul class="list"><li>बच्चों का पूरा टीकाकरण कराएँ (PCV, pentavalent, खसरा)।</li><li>6 महीने तक सिर्फ माँ का दूध, फिर पौष्टिक आहार।</li><li>LPG जैसे साफ़ ईंधन का इस्तेमाल करें, घर में धुआँ न रहे।</li><li>साबुन से हाथ धोएँ, खाँसते समय मुँह ढकें।</li><li>धूम्रपान छोड़ें।</li><li>बुज़ुर्ग और पुरानी बीमारी वाले लोग टीकों के बारे में डॉक्टर से पूछें।</li></ul>
+    
+  </section>
+
+  <section id="faq">
+    <h2>अक्सर पूछे जाने वाले सवाल (FAQ)</h2>
+    <details><summary>क्या निमोनिया फैलता है?</summary><p>निमोनिया पैदा करने वाले कीटाणु खाँसी-छींक से फैल सकते हैं, इसलिए मरीज़ मुँह ढककर खाँसे और हाथ धोते रहें।</p></details><details><summary>निमोनिया ठीक होने में कितना समय लगता है?</summary><p>बुखार अक्सर कुछ दिनों में उतर जाता है, पर पूरी ताकत लौटने में 2–6 हफ्ते लग सकते हैं।</p></details><details><summary>क्या निमोनिया दोबारा हो सकता है?</summary><p>हाँ। इसलिए टीके, पोषण और धुएँ से बचाव ज़रूरी है।</p></details><details><summary>क्या घर पर pulse oximeter रखना चाहिए?</summary><p>बुज़ुर्ग या फेफड़ों की बीमारी वाले घर में यह उपयोगी है। SpO2 94% से कम आए तो डॉक्टर को दिखाएँ।</p></details><details><summary>क्या ठंड लगने से निमोनिया होता है?</summary><p>ठंड से सीधे निमोनिया नहीं होता, यह कीटाणुओं से होता है। पर ठंड के मौसम में संक्रमण ज़्यादा फैलते हैं।</p></details>
+  </section>
+
+  <section id="sources">
+    <h2>Medical sources</h2>
+    <ul class="list sources"><li><a href="https://www.who.int/news-room/fact-sheets/detail/pneumonia" rel="noopener" target="_blank">WHO — Pneumonia in children</a></li><li><a href="https://nhm.gov.in/" rel="noopener" target="_blank">राष्ट्रीय स्वास्थ्य मिशन (SAANS)</a></li><li><a href="https://www.nhs.uk/conditions/pneumonia/" rel="noopener" target="_blank">NHS — Pneumonia</a></li></ul>
+  </section>
 </main>
-<footer style="background:#16283F;color:#B9C7D6" class="py-8 mt-4">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="grid md:grid-cols-4 gap-6 mb-6" style="font-family:'Mukta',sans-serif">
-      <div><div style="font-family:'Tiro Devanagari Hindi',serif;color:#fff" class="text-lg font-bold mb-2">सहीDoctor</div>
-        <p style="color:#8FA3B5" class="text-sm">हिंदी-प्रथम, मुफ़्त स्वास्थ्य नेविगेशन।</p></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">सेवाएं</div><div class="grid gap-1">
-        <a href="lakshan-janch" style="color:#B9C7D6;text-decoration:none">लक्षण जांच</a>
-        <a href="bimari-guide" style="color:#B9C7D6;text-decoration:none">बीमारी गाइड</a>
-        <a href="doctor-khojen" style="color:#B9C7D6;text-decoration:none">डॉक्टर खोजें</a>
-        <a href="sarkari-aspatal" style="color:#B9C7D6;text-decoration:none">सरकारी अस्पताल</a></div></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">और जानकारी</div><div class="grid gap-1">
-        <a href="ambulance" style="color:#B9C7D6;text-decoration:none">एम्बुलेंस (108)</a>
-        <a href="dawa-dukan" style="color:#B9C7D6;text-decoration:none">दवा दुकान</a>
-        <a href="juden" style="color:#B9C7D6;text-decoration:none">जुड़ें</a></div></div>
-      <div class="text-sm"><div style="color:#fff" class="font-bold mb-2">संस्था व नीति</div><div class="grid gap-1">
-        <a href="about" style="color:#B9C7D6;text-decoration:none">हमारे बारे में</a>
-        <a href="disclaimer" style="color:#B9C7D6;text-decoration:none">चिकित्सा अस्वीकरण</a>
-        <a href="privacy" style="color:#B9C7D6;text-decoration:none">गोपनीयता नीति</a>
-        <a href="contact" style="color:#B9C7D6;text-decoration:none">संपर्क करें</a></div></div>
-    </div>
-    <div style="border-top:1px solid rgba(255,255,255,.12);font-family:'Mukta',sans-serif;color:#7C90A2" class="pt-4 text-xs flex justify-between flex-wrap gap-2">
-      <span>© 2026 सहीDoctor · Quaitronix</span><span>शैक्षिक जानकारी — चिकित्सीय सलाह नहीं।</span></div>
+
+<footer>
+  <div class="in">
+    <p><strong>Disclaimer:</strong> यह जानकारी केवल जागरूकता के लिए है। यह डॉक्टर की सलाह, जाँच या इलाज का विकल्प नहीं है। गंभीर लक्षण होने पर तुरंत नज़दीकी अस्पताल जाएँ या <a href="tel:108">108</a> पर call करें।</p>
+    <p>© 2026 <a href="/">सहीDoctor</a> — मुफ्त हिंदी स्वास्थ्य जानकारी</p>
   </div>
 </footer>
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("/sw.js").catch(function () {});
-    });
-  }
-</script>
-<script>
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: "hi",
-    includedLanguages: "en,hi,pa,bn,ta,te,mr,gu,kn,ml,ur,or,as,mai,ne,sd,kok",
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, "google_translate_element");
-}
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
