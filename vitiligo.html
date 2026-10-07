@@ -357,9 +357,17 @@
   var h=document.querySelector('h1');
   var title=h?h.textContent.trim():document.title;
   var msg=title+' — आसान हिंदी में पूरी जानकारी (सहीDoctor):\n'+url;
-  document.querySelectorAll('.sd-wa').forEach(function(a){a.href='https://wa.me/?text='+encodeURIComponent(msg);});
+  document.querySelectorAll('.sd-wa').forEach(function(a){
+    a.href='https://wa.me/?text='+encodeURIComponent(msg);
+    a.addEventListener('click',function(e){
+      if(navigator.share){
+        e.preventDefault();
+        navigator.share({title:title,text:title+' — आसान हिंदी में पूरी जानकारी (सहीDoctor)',url:url}).catch(function(){});
+      }
+    });
+  });
 
-  var synth=window.speechSynthesis, speaking=false, queue=[], voice=null, rate=0.85;
+  var synth=window.speechSynthesis, speaking=false, queue=[], voice=null, NORMAL=0.95, SLOW=0.65, rate=NORMAL, gen=0, current='';
   function score(v){
     var n=(v.name||'').toLowerCase(), s=0;
     if(/natural|neural|enhanced|premium|wavenet/.test(n)) s+=4;
@@ -430,25 +438,33 @@
     if(!speaking) return;
     if(!queue.length){stop();return;}
     var t=queue.shift();
-    if(!t){setTimeout(next,600);return;}
-    var u=new SpeechSynthesisUtterance(t);
+    if(!t){var g0=gen;setTimeout(function(){if(g0===gen)next();},600);return;}
+    current=t; speakNow(t);
+  }
+  function speakNow(t){
+    var g=gen, u=new SpeechSynthesisUtterance(t);
     u.lang='hi-IN'; if(voice) u.voice=voice; u.rate=rate; u.pitch=1;
-    u.onend=function(){setTimeout(next,150);}; u.onerror=function(){stop();};
+    u.onend=function(){ if(g!==gen) return; setTimeout(function(){if(g===gen)next();},150); };
+    u.onerror=function(ev){ if(g!==gen) return; if(ev&&(ev.error==='interrupted'||ev.error==='canceled')) return; stop(); };
     synth.speak(u);
   }
-  function stop(){speaking=false;queue=[];if(synth)synth.cancel();setBtns(false);}
+  function stop(){gen++;speaking=false;queue=[];current='';if(synth)synth.cancel();setBtns(false);}
   function start(){
     if(!synth||!window.SpeechSynthesisUtterance){showMsg('आपके फ़ोन या browser में सुनने की सुविधा नहीं है। Chrome browser में खोलकर देखें।');return;}
     pickVoice();
     showMsg(voice?'':'अगर आवाज़ न आए या साफ़ न हो, तो फ़ोन की Settings में "Text-to-speech" में Google की हिंदी आवाज़ डाउनलोड करें।');
-    synth.cancel(); queue=chunks(pageText()); speaking=true; setBtns(true); next();
+    gen++; synth.cancel(); queue=chunks(pageText()); speaking=true; setBtns(true); next();
   }
   document.querySelectorAll('.sd-listen').forEach(function(b){b.addEventListener('click',function(){speaking?stop():start();});});
+  function paintSpeed(){
+    document.querySelectorAll('.sd-speed').forEach(function(x){
+      var slow=rate===SLOW; x.textContent=slow?'🐢 धीमा: चालू':'🐢 धीमा'; x.setAttribute('aria-pressed',slow?'true':'false');
+    });
+  }
   document.querySelectorAll('.sd-speed').forEach(function(b){
     b.addEventListener('click',function(){
-      rate=(rate<0.8)?0.85:0.7;
-      document.querySelectorAll('.sd-speed').forEach(function(x){x.textContent=rate<0.8?'🐢 धीमा: चालू':'🐢 धीमा';x.setAttribute('aria-pressed',rate<0.8?'true':'false');});
-      if(speaking){var rest=queue.slice();synth.cancel();queue=rest;next();}
+      rate=(rate===SLOW)?NORMAL:SLOW; paintSpeed();
+      if(speaking){ gen++; synth.cancel(); var again=current; setTimeout(function(){ if(again) speakNow(again); else next(); },120); }
     });
   });
   window.addEventListener('pagehide',stop);
