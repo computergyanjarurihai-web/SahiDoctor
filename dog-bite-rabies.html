@@ -188,6 +188,18 @@
     .facts{grid-template-columns:1fr}
   }
 </style>
+<style id="sd-tools-css">
+  .sd-tools{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 20px}
+  .sd-tools button,.sd-tools a{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:16px;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;text-decoration:none;border:2px solid var(--green)}
+  .sd-listen{background:var(--green);color:#fff}
+  .sd-listen[aria-pressed="true"]{background:#fff;color:var(--green)}
+  .sd-wa{background:#fff;color:#128c3e;border-color:#25d366 !important}
+  .sd-tools button:focus-visible,.sd-tools a:focus-visible{outline:3px solid #f2b705;outline-offset:2px}
+  .sd-tts-msg{width:100%;font-size:14px;color:var(--muted);margin:0}
+  .sd-share-end{background:var(--paper);border:1px dashed var(--line);border-radius:10px;padding:14px 18px;margin:0 0 18px;text-align:center}
+  .sd-share-end p{margin:0 0 10px}
+  .sd-share-end .sd-tools{justify-content:center;margin:0}
+</style>
 </head>
 <body>
 
@@ -206,6 +218,11 @@
   <p class="crumb"><a href="/">होम</a> › <a href="/bimariyan">बीमारियाँ</a> › कुत्ते का काटना</p>
   <h1>कुत्ते का काटना और रेबीज़ (Rabies)</h1>
   <p class="lead">रेबीज़ एक बार लक्षण शुरू होने के बाद लगभग हमेशा जानलेवा होता है, पर <strong>सही समय पर घाव धोने और टीका लगवाने से 100% बचाव</strong> संभव है। कुत्ते, बिल्ली या बंदर के काटने या खरोंचने पर उसी दिन hospital जाएँ।</p>
+  <div class="sd-tools" data-where="top">
+    <button type="button" class="sd-listen" aria-pressed="false">🔊 सुनें</button>
+    <a class="sd-wa" href="#" target="_blank" rel="noopener">📲 WhatsApp पर भेजें</a>
+    <p class="sd-tts-msg" hidden></p>
+  </div>
   <p class="meta">
     Last updated: 5 अक्टूबर 2026<br>
     यह जानकारी WHO और भारत सरकार के राष्ट्रीय रेबीज़ नियंत्रण कार्यक्रम (NCDC) के दिशानिर्देशों पर आधारित है।
@@ -293,6 +310,14 @@
     <h2>Medical sources</h2>
     <ul class="list sources"><li><a href="https://www.who.int/news-room/fact-sheets/detail/rabies" rel="noopener" target="_blank">WHO — Rabies</a></li><li><a href="https://ncdc.mohfw.gov.in/" rel="noopener" target="_blank">NCDC — National Rabies Control Programme</a></li><li><a href="https://www.cdc.gov/rabies/" rel="noopener" target="_blank">CDC — Rabies</a></li></ul>
   </section>
+  <div class="sd-share-end">
+    <p><strong>यह जानकारी किसी की जान बचा सकती है।</strong> अपने परिवार और गाँव के WhatsApp group में भेजें।</p>
+    <div class="sd-tools" data-where="bottom">
+    <button type="button" class="sd-listen" aria-pressed="false">🔊 सुनें</button>
+    <a class="sd-wa" href="#" target="_blank" rel="noopener">📲 WhatsApp पर भेजें</a>
+    <p class="sd-tts-msg" hidden></p>
+  </div>
+  </div>
 </main>
 
 <footer>
@@ -302,5 +327,72 @@
   </div>
 </footer>
 
+<script id="sd-tools-js">
+(function(){
+  var url=location.origin+location.pathname;
+  var title=document.querySelector('h1')?document.querySelector('h1').textContent.trim():document.title;
+  var msg=title+' — आसान हिंदी में पूरी जानकारी (सहीDoctor):\n'+url;
+  document.querySelectorAll('.sd-wa').forEach(function(a){a.href='https://wa.me/?text='+encodeURIComponent(msg);});
+
+  var synth=window.speechSynthesis, speaking=false, queue=[], voice=null;
+  function pickVoice(){
+    if(!synth) return;
+    var v=synth.getVoices();
+    voice=v.find(function(x){return /^hi/i.test(x.lang);})||null;
+  }
+  if(synth){pickVoice(); if(synth.onvoiceschanged!==undefined){synth.onvoiceschanged=pickVoice;}}
+
+  function pageText(){
+    var parts=[];
+    var main=document.querySelector('main'); if(!main) return '';
+    var h1=main.querySelector('h1'); if(h1) parts.push(h1.innerText);
+    var lead=main.querySelector('.lead'); if(lead) parts.push(lead.innerText);
+    main.querySelectorAll('section').forEach(function(s){
+      if(s.id==='sources') return;
+      var c=s.cloneNode(true);
+      c.querySelectorAll('.btn,.sd-tools,script').forEach(function(e){e.remove();});
+      c.querySelectorAll('details').forEach(function(d){d.setAttribute('open','');});
+      parts.push(c.innerText);
+    });
+    return parts.join('\n');
+  }
+  function chunks(t){
+    var out=[],cur='';
+    t.replace(/\s*\n+\s*/g,'। ').replace(/([।?!.])\s+/g,'$1\u0001').split('\u0001').forEach(function(s){
+      s=s.trim(); if(!s) return;
+      if((cur+' '+s).length>180){ if(cur) out.push(cur); cur=s; } else { cur=cur?cur+' '+s:s; }
+    });
+    if(cur) out.push(cur);
+    return out;
+  }
+  function setBtns(on){
+    document.querySelectorAll('.sd-listen').forEach(function(b){
+      b.setAttribute('aria-pressed',on?'true':'false');
+      b.textContent=on?'⏹ रोकें':'🔊 सुनें';
+    });
+  }
+  function showMsg(t){document.querySelectorAll('.sd-tts-msg').forEach(function(p){p.textContent=t;p.hidden=!t;});}
+  function next(){
+    if(!speaking) return;
+    if(!queue.length){stop();return;}
+    var u=new SpeechSynthesisUtterance(queue.shift());
+    u.lang='hi-IN'; if(voice) u.voice=voice; u.rate=0.9;
+    u.onend=next; u.onerror=function(){stop();};
+    synth.speak(u);
+  }
+  function stop(){speaking=false; queue=[]; if(synth) synth.cancel(); setBtns(false);}
+  function start(){
+    if(!synth||!window.SpeechSynthesisUtterance){showMsg('आपके फ़ोन या browser में सुनने की सुविधा नहीं है। Chrome browser में खोलकर देखें।');return;}
+    pickVoice();
+    if(!voice){showMsg('अगर आवाज़ न आए, तो फ़ोन की Settings में "Text-to-speech" में हिंदी भाषा डाउनलोड करें।');}
+    else showMsg('');
+    synth.cancel(); queue=chunks(pageText()); speaking=true; setBtns(true); next();
+  }
+  document.querySelectorAll('.sd-listen').forEach(function(b){
+    b.addEventListener('click',function(){speaking?stop():start();});
+  });
+  window.addEventListener('pagehide',stop);
+})();
+</script>
 </body>
 </html>
