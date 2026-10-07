@@ -211,6 +211,8 @@
   .sd-share-end{background:var(--paper);border:1px dashed var(--line);border-radius:10px;padding:14px 18px;margin:0 0 18px;text-align:center}
   .sd-share-end p{margin:0 0 10px}
   .sd-share-end .sd-tools{justify-content:center;margin:0}
+  .sd-speed{background:#fff;color:var(--green);font-size:15px !important}
+  .sd-speed[aria-pressed="true"]{background:var(--green-soft)}
 </style>
 </head>
 <body>
@@ -232,6 +234,7 @@
   <p class="lead">महिलाओं में हार्मोन की एक आम गड़बड़ी, जिसमें माहवारी अनियमित होती है और अंडा बनने की प्रक्रिया प्रभावित होती है। यह जड़ से खत्म नहीं होता, पर सही जीवनशैली और इलाज से अच्छी तरह नियंत्रित रहता है, और ज़्यादातर महिलाएँ माँ बन सकती हैं।</p>
   <div class="sd-tools" data-where="top">
     <button type="button" class="sd-listen" aria-pressed="false">🔊 सुनें</button>
+    <button type="button" class="sd-speed" aria-pressed="false">🐢 धीमा</button>
     <a class="sd-wa" href="#" target="_blank" rel="noopener">📲 WhatsApp पर भेजें</a>
     <p class="sd-tts-msg" hidden></p>
   </div>
@@ -338,6 +341,7 @@
     <p><strong>यह जानकारी किसी की जान बचा सकती है।</strong> अपने परिवार और गाँव के WhatsApp group में भेजें।</p>
     <div class="sd-tools" data-where="bottom">
     <button type="button" class="sd-listen" aria-pressed="false">🔊 सुनें</button>
+    <button type="button" class="sd-speed" aria-pressed="false">🐢 धीमा</button>
     <a class="sd-wa" href="#" target="_blank" rel="noopener">📲 WhatsApp पर भेजें</a>
     <p class="sd-tts-msg" hidden></p>
   </div>
@@ -354,21 +358,48 @@
 <script id="sd-tools-js">
 (function(){
   var url=location.origin+location.pathname;
-  var title=document.querySelector('h1')?document.querySelector('h1').textContent.trim():document.title;
+  var h=document.querySelector('h1');
+  var title=h?h.textContent.trim():document.title;
   var msg=title+' — आसान हिंदी में पूरी जानकारी (सहीDoctor):\n'+url;
   document.querySelectorAll('.sd-wa').forEach(function(a){a.href='https://wa.me/?text='+encodeURIComponent(msg);});
 
-  var synth=window.speechSynthesis, speaking=false, queue=[], voice=null;
+  var synth=window.speechSynthesis, speaking=false, queue=[], voice=null, rate=0.85;
+  function score(v){
+    var n=(v.name||'').toLowerCase(), s=0;
+    if(/natural|neural|enhanced|premium|wavenet/.test(n)) s+=4;
+    if(/google/.test(n)) s+=3;
+    if(/swara|madhur|kalpana|lekha|hemant/.test(n)) s+=2;
+    if(!v.localService) s+=1;
+    if(/^hi[-_]in/i.test(v.lang)) s+=1;
+    return s;
+  }
   function pickVoice(){
     if(!synth) return;
-    var v=synth.getVoices();
-    voice=v.find(function(x){return /^hi/i.test(x.lang);})||null;
+    var v=synth.getVoices().filter(function(x){return /^hi/i.test(x.lang);});
+    v.sort(function(a,b){return score(b)-score(a);});
+    voice=v[0]||null;
   }
   if(synth){pickVoice(); if(synth.onvoiceschanged!==undefined){synth.onvoiceschanged=pickVoice;}}
 
+  // पढ़ने लायक बनाना: अंक, चिन्ह और छोटे शब्द
+  var REP=[
+    [/[\u{1F300}-\u{1FAFF}\u2600-\u27BF\uFE0F]/gu,''],
+    [/(\d)\s*[–-]\s*(\d)/g,'$1 से $2'],
+    [/°\s*F/g,' डिग्री फ़ैरनहाइट'],[/°\s*C/g,' डिग्री सेल्सियस'],
+    [/mg\/dL/gi,' मिलीग्राम प्रति डेसीलीटर'],[/g\/dL/gi,' ग्राम प्रति डेसीलीटर'],[/mIU\/L/gi,''],
+    [/(\d)\s*%/g,'$1 प्रतिशत'],[/(\d)\s*cm\b/g,'$1 सेंटीमीटर'],[/(\d)\s*mm\b/g,'$1 मिलीमीटर'],
+    [/(\d)\s*kg\b/gi,'$1 किलो'],[/(\d)\/(\d)/g,'$1 बटा $2'],
+    [/\bBP\b/g,'बी पी'],[/\bTB\b/g,'टी बी'],[/\bCBC\b/g,'सी बी सी'],[/\bPCOD\b/g,'पी सी ओ डी'],[/\bPCOS\b/g,'पी सी ओ एस'],
+    [/\bUTI\b/g,'यू टी आई'],[/\bORS\b/g,'ओ आर एस'],[/\bECG\b/g,'ई सी जी'],[/\bCT\b/g,'सी टी'],[/\bMRI\b/g,'एम आर आई'],
+    [/\bPHC\b/g,'पी एच सी'],[/\bCHC\b/g,'सी एच सी'],[/\bHbA1c\b/g,'एच बी ए वन सी'],[/\bLFT\b/g,'एल एफ टी'],[/\bTSH\b/g,'टी एस एच'],
+    [/\bASHA\b/g,'आशा'],[/\bMBBS\b/g,'एम बी बी एस'],[/\bMD\b/g,'एम डी'],[/\bLDL\b/g,'एल डी एल'],[/\bHDL\b/g,'एच डी एल'],
+    [/\bDEXA\b/g,'डेक्सा'],[/\bNS1\b/g,'एन एस वन'],[/\bIgM\b/g,'आई जी एम'],[/\bRDT\b/g,'आर डी टी'],[/\bCPR\b/g,'सी पी आर'],
+    [/\bFAQ\b/g,''],[/\t+/g,', '],[/\s*[\(\)]\s*/g,', '],[/[\/|•→›]/g,', '],[/\s{2,}/g,' ']
+  ];
+  function clean(t){REP.forEach(function(r){t=t.replace(r[0],r[1]);});return t;}
+
   function pageText(){
-    var parts=[];
-    var main=document.querySelector('main'); if(!main) return '';
+    var parts=[], main=document.querySelector('main'); if(!main) return [];
     var h1=main.querySelector('h1'); if(h1) parts.push(h1.innerText);
     var lead=main.querySelector('.lead'); if(lead) parts.push(lead.innerText);
     main.querySelectorAll('section').forEach(function(s){
@@ -376,44 +407,53 @@
       var c=s.cloneNode(true);
       c.querySelectorAll('.btn,.sd-tools,script').forEach(function(e){e.remove();});
       c.querySelectorAll('details').forEach(function(d){d.setAttribute('open','');});
-      parts.push(c.innerText);
+      c.querySelectorAll('li,tr,h2,h3,summary,p,dd,dt').forEach(function(e){e.appendChild(document.createTextNode('।'));});
+      document.body.appendChild(c); c.style.position='absolute'; c.style.left='-9999px';
+      parts.push(c.innerText); c.remove();
     });
-    return parts.join('\n');
+    return parts;
   }
-  function chunks(t){
-    var out=[],cur='';
-    t.replace(/\s*\n+\s*/g,'। ').replace(/([।?!.])\s+/g,'$1\u0001').split('\u0001').forEach(function(s){
-      s=s.trim(); if(!s) return;
-      if((cur+' '+s).length>180){ if(cur) out.push(cur); cur=s; } else { cur=cur?cur+' '+s:s; }
+  function chunks(parts){
+    var out=[];
+    parts.forEach(function(t){
+      var cur='';
+      clean(t).replace(/\s*\n+\s*/g,' ').replace(/([।?!])\s*(।\s*)+/g,'$1 ').replace(/([।?!.])\s+/g,'$1\u0001').split('\u0001').forEach(function(s){
+        s=s.replace(/^[,।\s]+/,'').trim(); if(s.length<2) return;
+        if((cur+' '+s).length>160){ if(cur) out.push(cur); cur=s; } else { cur=cur?cur+' '+s:s; }
+      });
+      if(cur) out.push(cur);
+      out.push('');   // हिस्सों के बीच ठहराव
     });
-    if(cur) out.push(cur);
     return out;
   }
   function setBtns(on){
-    document.querySelectorAll('.sd-listen').forEach(function(b){
-      b.setAttribute('aria-pressed',on?'true':'false');
-      b.textContent=on?'⏹ रोकें':'🔊 सुनें';
-    });
+    document.querySelectorAll('.sd-listen').forEach(function(b){b.setAttribute('aria-pressed',on?'true':'false');b.textContent=on?'⏹ रोकें':'🔊 सुनें';});
   }
   function showMsg(t){document.querySelectorAll('.sd-tts-msg').forEach(function(p){p.textContent=t;p.hidden=!t;});}
   function next(){
     if(!speaking) return;
     if(!queue.length){stop();return;}
-    var u=new SpeechSynthesisUtterance(queue.shift());
-    u.lang='hi-IN'; if(voice) u.voice=voice; u.rate=0.9;
-    u.onend=next; u.onerror=function(){stop();};
+    var t=queue.shift();
+    if(!t){setTimeout(next,600);return;}
+    var u=new SpeechSynthesisUtterance(t);
+    u.lang='hi-IN'; if(voice) u.voice=voice; u.rate=rate; u.pitch=1;
+    u.onend=function(){setTimeout(next,150);}; u.onerror=function(){stop();};
     synth.speak(u);
   }
-  function stop(){speaking=false; queue=[]; if(synth) synth.cancel(); setBtns(false);}
+  function stop(){speaking=false;queue=[];if(synth)synth.cancel();setBtns(false);}
   function start(){
     if(!synth||!window.SpeechSynthesisUtterance){showMsg('आपके फ़ोन या browser में सुनने की सुविधा नहीं है। Chrome browser में खोलकर देखें।');return;}
     pickVoice();
-    if(!voice){showMsg('अगर आवाज़ न आए, तो फ़ोन की Settings में "Text-to-speech" में हिंदी भाषा डाउनलोड करें।');}
-    else showMsg('');
+    showMsg(voice?'':'अगर आवाज़ न आए या साफ़ न हो, तो फ़ोन की Settings में "Text-to-speech" में Google की हिंदी आवाज़ डाउनलोड करें।');
     synth.cancel(); queue=chunks(pageText()); speaking=true; setBtns(true); next();
   }
-  document.querySelectorAll('.sd-listen').forEach(function(b){
-    b.addEventListener('click',function(){speaking?stop():start();});
+  document.querySelectorAll('.sd-listen').forEach(function(b){b.addEventListener('click',function(){speaking?stop():start();});});
+  document.querySelectorAll('.sd-speed').forEach(function(b){
+    b.addEventListener('click',function(){
+      rate=(rate<0.8)?0.85:0.7;
+      document.querySelectorAll('.sd-speed').forEach(function(x){x.textContent=rate<0.8?'🐢 धीमा: चालू':'🐢 धीमा';x.setAttribute('aria-pressed',rate<0.8?'true':'false');});
+      if(speaking){var rest=queue.slice();synth.cancel();queue=rest;next();}
+    });
   });
   window.addEventListener('pagehide',stop);
 })();
